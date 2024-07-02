@@ -4,7 +4,7 @@ import java.math.BigDecimal
 
 /**
  *packageName    : com.study.microservcie.dto
- * fileName       : ProductRequest
+ * fileName       : ProductResponse
  * author         : LEE KYUHEON
  * date           : 2024-07-02
  * description    :
@@ -13,8 +13,7 @@ import java.math.BigDecimal
  * -----------------------------------------------------------
  * 2024-07-02        LEE KYUHEON       최초 생성
  */
-
-data class ProductRequest(
+data class ProductResponse(
     var id: String = "",
     var name: String = "",
     var description: String = "",

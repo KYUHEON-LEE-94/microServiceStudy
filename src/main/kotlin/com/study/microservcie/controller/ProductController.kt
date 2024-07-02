@@ -1,12 +1,11 @@
 package com.study.microservcie.controller
 
 import com.study.microservcie.dto.ProductRequest
+import com.study.microservcie.dto.ProductResponse
+import com.study.microservcie.service.ProductService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 /**
  *packageName    : com.study.microservcie.controller
@@ -21,10 +20,18 @@ import org.springframework.web.bind.annotation.RestController
  */
 @RestController
 @RequestMapping("/api/product")
-class ProductController {
+class ProductController @Autowired constructor(
+    private val productService: ProductService
+) {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun createProduct(@RequestBody productRequest: ProductRequest) {
-        
+        productService.createProduct(productRequest)
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    fun getAllProducts():List<ProductResponse>{
+        return productService.getAllProducts()
     }
 }

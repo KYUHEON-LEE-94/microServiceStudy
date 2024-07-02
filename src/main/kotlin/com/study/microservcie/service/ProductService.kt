@@ -1,6 +1,7 @@
 package com.study.microservcie.service
 
 import com.study.microservcie.dto.ProductRequest
+import com.study.microservcie.dto.ProductResponse
 import com.study.microservcie.model.Product
 import com.study.microservcie.repository.ProductRepository
 import io.github.oshai.kotlinlogging.KotlinLogging
@@ -38,5 +39,19 @@ class ProductService @Autowired constructor(
         }
         productRepository.save(product)
         logger.atDebug { "Product is Savedd: ${product.id}" }
+    }
+
+    fun getAllProducts():List<ProductResponse>{
+        return productRepository.findAll().stream().map { product ->
+            mapToProductResponse(product)
+        }.toList()
+    }
+    fun mapToProductResponse(product: Product):ProductResponse{
+        return ProductResponse().apply {
+            id=product.id
+            name=product.name
+            description=product.description
+            price=product.price
+        }
     }
 }
