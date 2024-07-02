@@ -21,14 +21,10 @@ import java.math.BigDecimal
  * 2024-07-02        LEE KYUHEON       최초 생성
  */
 @Document(value = "product")
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
-class Product {
+data class Product(
     @Id
-    private var id:String = "";
-    private var name:String = "";
-    private var description:String = "";
-    private var price:BigDecimal = BigDecimal.ZERO
-}
+    var id: String = "",
+    var name: String = "",
+    var description: String = "",
+    var price: BigDecimal = BigDecimal.ZERO
+)
