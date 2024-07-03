@@ -1,8 +1,8 @@
 # microServiceStudy
 # 재원
-- kotlin
-- java17
+- kotlin (JDK17)
 - spring boot
+- MongoDB
 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
