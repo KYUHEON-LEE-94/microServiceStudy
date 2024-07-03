@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="proudct-service application 추가">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="TestContainers 의존성 추가및 기본 세팅">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/product/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/test/kotlin/com/study/microservcie/MicroServcieApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/test/kotlin/com/study/microservcie/MicroServcieApplicationTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719994406644</updated>
       <workItem from="1719994409247" duration="1748000" />
-      <workItem from="1719996392221" duration="802000" />
+      <workItem from="1719996392221" duration="1814000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -128,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719995795962</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="TestContainers 의존성 추가및 기본 세팅">
+      <created>1719997812005</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719997812005</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="proudct-service application 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="proudct-service application 추가" />
+    <MESSAGE value="TestContainers 의존성 추가및 기본 세팅" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestContainers 의존성 추가및 기본 세팅" />
   </component>
 </project>
