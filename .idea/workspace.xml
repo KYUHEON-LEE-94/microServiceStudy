@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="README 위치 변경">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="post Save Test 생성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/test/kotlin/com/study/microservcie/MicroServcieApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/test/kotlin/com/study/microservcie/MicroServcieApplicationTests.kt" afterDir="false" />
     </list>
@@ -140,7 +140,7 @@
       <updated>1719994406644</updated>
       <workItem from="1719994409247" duration="1748000" />
       <workItem from="1719996392221" duration="1814000" />
-      <workItem from="1720050981853" duration="1973000" />
+      <workItem from="1720050981853" duration="2706000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720051091233</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="post Save Test 생성">
+      <created>1720089496533</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720089496533</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +192,7 @@
     <MESSAGE value="proudct-service application 추가" />
     <MESSAGE value="TestContainers 의존성 추가및 기본 세팅" />
     <MESSAGE value="README 위치 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="README 위치 변경" />
+    <MESSAGE value="post Save Test 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="post Save Test 생성" />
   </component>
 </project>

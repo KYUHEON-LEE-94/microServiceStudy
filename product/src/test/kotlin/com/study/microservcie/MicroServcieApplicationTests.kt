@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
 import org.springframework.test.context.DynamicPropertyRegistry
+import org.springframework.test.context.DynamicPropertySource
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
@@ -16,6 +17,7 @@ import org.testcontainers.containers.MongoDBContainer
 import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.junit.jupiter.Testcontainers
 import java.math.BigDecimal
+import kotlin.test.assertEquals
 
 @SpringBootTest
 @Testcontainers
@@ -38,6 +40,12 @@ class MicroServcieApplicationTests {
         var mongoDBContainer: MongoDBContainer = MongoDBContainer("mongo:4.4.2").apply {
             withExposedPorts(27017)
         }
+
+        @DynamicPropertySource //동적으로 속성을 설정하는 데 사용되는 어노테이션
+        @JvmStatic
+        fun setProperties(dynamicPropertyRegistry: DynamicPropertyRegistry){
+            dynamicPropertyRegistry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl)
+        }
     }
 
     @Autowired
@@ -49,9 +57,7 @@ class MicroServcieApplicationTests {
     @Autowired
     private lateinit var productRepository: ProductRepository
 
-    fun setProperties(dynamicPropertyRegistry: DynamicPropertyRegistry){
-        dynamicPropertyRegistry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl)
-    }
+
 
     @Test
     fun shouldCreateProduct() {
@@ -63,6 +69,7 @@ class MicroServcieApplicationTests {
             .content(productRequestString)
         )
             .andExpect(status().isCreated)
+        assertEquals(1, productRepository.findAll().size )
     }
 
     private fun getProductRequest():ProductRequest {
