@@ -1,15 +1,21 @@
 package com.study.microservcie
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.study.microservcie.dto.ProductRequest
+import com.study.microservcie.repository.ProductRepository
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.http.MediaType
 import org.springframework.test.context.DynamicPropertyRegistry
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import org.testcontainers.containers.MongoDBContainer
 import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.junit.jupiter.Testcontainers
+import java.math.BigDecimal
 
 @SpringBootTest
 @Testcontainers
@@ -37,14 +43,34 @@ class MicroServcieApplicationTests {
     @Autowired
     lateinit var mockMvc: MockMvc
 
+    @Autowired
+    private lateinit var objectMapper:ObjectMapper
+
+    @Autowired
+    private lateinit var productRepository: ProductRepository
+
     fun setProperties(dynamicPropertyRegistry: DynamicPropertyRegistry){
         dynamicPropertyRegistry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl)
     }
 
     @Test
     fun shouldCreateProduct() {
+        val productRequest = getProductRequest()
+        val productRequestString = objectMapper.writeValueAsString(productRequest)
+
         mockMvc.perform(MockMvcRequestBuilders.post("/api/product")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(productRequestString)
         )
+            .andExpect(status().isCreated)
+    }
+
+    private fun getProductRequest():ProductRequest {
+        return ProductRequest().apply {
+            name="iPhone 13"
+            description="iPhone 13"
+            price= BigDecimal.valueOf(1200)
+        }
     }
 
 }
