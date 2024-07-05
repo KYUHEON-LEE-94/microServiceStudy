@@ -1,5 +1,11 @@
 package com.study.productservice.model
 
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
+import jakarta.persistence.Table
+
 /**
  * @Description : Order.java
  * @author      : heon
@@ -16,6 +22,12 @@ package com.study.productservice.model
  *
  * <pre>
  */
-
-class Order {
-}
+@Entity
+@Table(name="t_orders")
+data class Order (
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long,
+    var orderNumber:String ,
+    var orderLineItemsList:List<OrderLineItems>
+)
