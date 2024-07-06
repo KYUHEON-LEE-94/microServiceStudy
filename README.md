@@ -2,7 +2,7 @@
 # 재원
 - kotlin (JDK17)
 - spring boot
-- MongoDB
+- MongoDB (by Docker)
 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
