@@ -1,10 +1,11 @@
-package com.study.productservice.dto
+package com.study.productservice.repository
 
-import com.study.productservice.model.OrderLineItems
+import com.study.productservice.model.Order
+import org.springframework.data.jpa.repository.JpaRepository
 
 /**
- *packageName    : com.study.productservice.dto
- * fileName       : OrderRequest
+ *packageName    : com.study.productservice.repository
+ * fileName       : OrderRepository
  * author         : LEE KYUHEON
  * date           : 2024-07-06
  * description    :
@@ -13,6 +14,6 @@ import com.study.productservice.model.OrderLineItems
  * -----------------------------------------------------------
  * 2024-07-06        LEE KYUHEON       최초 생성
  */
-data class OrderRequest (
-    var orderLineItems: List<OrderLinesImtesDto>
-)
+interface OrderRepository:JpaRepository<Order,Long> {
+
+}

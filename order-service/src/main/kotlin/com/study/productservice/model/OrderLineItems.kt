@@ -24,8 +24,8 @@ import java.math.BigDecimal
 data class OrderLineItems (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id:Long,
-    var skuCode:String,
-    var price:BigDecimal,
-    var quantity:Int
+    var id:Long = 0,
+    var skuCode:String = "",
+    var price:BigDecimal = BigDecimal.ZERO,
+    var quantity:Int = 0
 )

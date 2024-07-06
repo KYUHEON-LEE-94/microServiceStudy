@@ -23,12 +23,12 @@ import jakarta.persistence.*
 data class Order (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long,
-    var orderNumber:String ,
+    var id: Long = 0,
+    var orderNumber:String = "",
     /*
     * cascade: 부모 엔티티에서 자식 엔티티로 어떤 작업이 전파될지를 정의
     * [CascadeType.ALL]: 모든 작업(영속화, 병합, 제거 등)이 자식 엔티티로 전파 즉, 부모 엔티티가 저장, 업데이트, 삭제될 때 자식 엔티티도 함께 처리
     * */
     @OneToMany(cascade =[CascadeType.ALL])
-    var orderLineItemsList:List<OrderLineItems>
+    var orderLineItemsList:List<OrderLineItems> = ArrayList()
 )
