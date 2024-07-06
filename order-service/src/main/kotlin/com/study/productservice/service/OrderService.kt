@@ -32,7 +32,7 @@ class OrderService @Autowired constructor(
 
             orderNumber = UUID.randomUUID().toString(),
 
-            orderLineItemsList = orderRequest.orderLineItems.stream()
+            orderLineItemsList = orderRequest.orderLineItemsDtoList.stream()
                 .map{orderLinesItem -> mapToDto(orderLinesItem)}
                 .toList()
         )

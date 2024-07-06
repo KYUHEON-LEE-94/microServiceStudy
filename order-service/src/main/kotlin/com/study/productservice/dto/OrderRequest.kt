@@ -1,7 +1,5 @@
 package com.study.productservice.dto
 
-import com.study.productservice.model.OrderLineItems
-
 /**
  *packageName    : com.study.productservice.dto
  * fileName       : OrderRequest
@@ -14,5 +12,5 @@ import com.study.productservice.model.OrderLineItems
  * 2024-07-06        LEE KYUHEON       최초 생성
  */
 data class OrderRequest (
-    var orderLineItems: List<OrderLinesImtesDto>
+    var orderLineItemsDtoList: List<OrderLinesImtesDto>
 )
