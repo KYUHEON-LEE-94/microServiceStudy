@@ -8,6 +8,7 @@ import com.study.productservice.repository.OrderRepository
 import lombok.extern.slf4j.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 import java.util.*
 
 /**
@@ -22,7 +23,7 @@ import java.util.*
  * 2024-07-06        LEE KYUHEON       최초 생성
  */
 @Service
-@Slf4j
+@Transactional
 class OrderService @Autowired constructor(
     private var orderRepository: OrderRepository)
 {
