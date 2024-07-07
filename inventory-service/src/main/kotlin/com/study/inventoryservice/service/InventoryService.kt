@@ -23,6 +23,6 @@ class InventoryService @Autowired constructor(
 
     @Transactional(readOnly = true)
     fun isInStock(skuCode:String):Boolean{
-        return inventoryRepository.findBySkuCode().isPresent
+        return inventoryRepository.findBySkuCode(skuCode).isPresent
     }
 }

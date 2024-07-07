@@ -18,7 +18,7 @@ import jakarta.persistence.*
 data class Inventory (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private var id:Long = 0,
-    private var skuCode:String = "",
-    private var quantity:Int = 0
+    var id:Long = 0,
+    var skuCode:String = "",
+    var quantity:Int = 0
 )
