@@ -8,6 +8,10 @@
 - spring boot Microservice Project 배우기 및 활용
 - Java -> kotlin으로 코드를 변경함으로써 kotlin 문법 적응
 
+## 목표 아키텍처
+![image](https://github.com/KYUHEON-LEE-94/microServiceStudy/assets/101496219/f3238b4f-6733-4be3-bf41-533708016b7e)
+
+
 # API
 ##Proudct
 
