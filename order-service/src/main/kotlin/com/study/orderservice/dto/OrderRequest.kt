@@ -1,13 +1,8 @@
-package com.study.productservice.dto
-
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import java.math.BigDecimal
+package com.study.orderservice.dto
 
 /**
  *packageName    : com.study.productservice.dto
- * fileName       : OrderLinesImtesDto
+ * fileName       : OrderRequest
  * author         : LEE KYUHEON
  * date           : 2024-07-06
  * description    :
@@ -16,9 +11,6 @@ import java.math.BigDecimal
  * -----------------------------------------------------------
  * 2024-07-06        LEE KYUHEON       최초 생성
  */
-data class OrderLinesImtesDto (
-    var id:Long,
-    var skuCode:String,
-    var price: BigDecimal,
-    var quantity:Int
+data class OrderRequest (
+    var orderLineItemsDtoList: List<OrderLinesImtesDto>
 )

@@ -1,6 +1,6 @@
-package com.study.productservice.repository
+package com.study.orderservice.repository
 
-import com.study.productservice.model.Order
+import com.study.orderservice.model.Order
 import org.springframework.data.jpa.repository.JpaRepository
 
 /**

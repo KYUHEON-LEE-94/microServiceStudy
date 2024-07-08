@@ -1,5 +1,6 @@
 package com.study.inventoryservice.service
 
+import com.study.inventoryservice.dto.InventoryResponse
 import com.study.inventoryservice.repositroy.InventoryRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -22,7 +23,15 @@ class InventoryService @Autowired constructor(
 ){
 
     @Transactional(readOnly = true)
-    fun isInStock(skuCode:String):Boolean{
-        return inventoryRepository.findBySkuCode(skuCode).isPresent
+    fun isInStock(skuCode:List<String>):List<InventoryResponse>{
+
+        return inventoryRepository.findBySkuCodeIn(skuCode)
+            .map { inventory ->  InventoryResponse().apply {
+                this.isInStock=inventory.quantity>0
+                this.skuCode=inventory.skuCode
+
+                }
+            }
+
     }
 }

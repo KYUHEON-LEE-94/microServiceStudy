@@ -1,8 +1,10 @@
-package com.study.productservice.dto
+package com.study.orderservice.dto
+
+import java.math.BigDecimal
 
 /**
  *packageName    : com.study.productservice.dto
- * fileName       : OrderRequest
+ * fileName       : OrderLinesImtesDto
  * author         : LEE KYUHEON
  * date           : 2024-07-06
  * description    :
@@ -11,6 +13,9 @@ package com.study.productservice.dto
  * -----------------------------------------------------------
  * 2024-07-06        LEE KYUHEON       최초 생성
  */
-data class OrderRequest (
-    var orderLineItemsDtoList: List<OrderLinesImtesDto>
+data class OrderLinesImtesDto (
+    var id:Long,
+    var skuCode:String,
+    var price: BigDecimal,
+    var quantity:Int
 )

@@ -1,14 +1,15 @@
-package com.study.productservice.service
+package com.study.orderservice.service
 
-import com.study.productservice.dto.OrderLinesImtesDto
-import com.study.productservice.dto.OrderRequest
-import com.study.productservice.model.Order
-import com.study.productservice.model.OrderLineItems
-import com.study.productservice.repository.OrderRepository
-import lombok.extern.slf4j.Slf4j
+import com.study.orderservice.dto.OrderLinesImtesDto
+import com.study.orderservice.dto.OrderRequest
+import com.study.orderservice.model.Order
+import com.study.orderservice.model.OrderLineItems
+import com.study.orderservice.repository.OrderRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
+import org.springframework.web.reactive.function.client.WebClient
+import org.springframework.web.reactive.function.client.bodyToMono
 import java.util.*
 
 /**
@@ -25,7 +26,9 @@ import java.util.*
 @Service
 @Transactional
 class OrderService @Autowired constructor(
-    private var orderRepository: OrderRepository)
+    private var orderRepository: OrderRepository,
+    private var webClient: WebClient
+    )
 {
 
     fun placeOrder(orderRequest: OrderRequest){
@@ -33,12 +36,25 @@ class OrderService @Autowired constructor(
 
             orderNumber = UUID.randomUUID().toString(),
 
-            orderLineItemsList = orderRequest.orderLineItemsDtoList.stream()
-                .map{orderLinesItem -> mapToDto(orderLinesItem)}
-                .toList()
+            orderLineItemsList = orderRequest.orderLineItemsDtoList.map { orderLinesItem ->
+                mapToDto(orderLinesItem)
+            }
         )
 
-        orderRepository.save(order)
+        //Inventory service 호출, 재고가 있으면 주문 진행
+        val result = webClient.get()
+            .uri("http://localhost:8082/api/inventory/")
+            .retrieve()
+            .bodyToMono(Boolean::class.java)
+            .block()
+
+        if(result == true){
+            orderRepository.save(order)
+        }else{
+            throw IllegalArgumentException("Product is not in stock")
+        }
+
+
     }
 
     fun mapToDto(orderLinesItemsDto: OrderLinesImtesDto):OrderLineItems{

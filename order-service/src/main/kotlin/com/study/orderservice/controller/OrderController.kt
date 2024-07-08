@@ -1,7 +1,7 @@
-package com.study.productservice.controller
+package com.study.orderservice.controller
 
-import com.study.productservice.dto.OrderRequest
-import com.study.productservice.service.OrderService
+import com.study.orderservice.dto.OrderRequest
+import com.study.orderservice.service.OrderService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.PostMapping

@@ -16,5 +16,5 @@ import java.util.Optional
  * 2024-07-07        LEE KYUHEON       최초 생성
  */
 interface InventoryRepository:JpaRepository<Inventory,Long> {
-    fun findBySkuCode(skuCode:String):Optional<Inventory>
+    fun findBySkuCodeIn(skuCode: List<String>):List<Inventory>
 }

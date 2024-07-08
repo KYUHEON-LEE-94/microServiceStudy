@@ -1,4 +1,4 @@
-package com.study.productservice
+package com.study.orderservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

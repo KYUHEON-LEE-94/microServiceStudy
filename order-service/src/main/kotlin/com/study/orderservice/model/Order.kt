@@ -1,4 +1,4 @@
-package com.study.productservice.model
+package com.study.orderservice.model
 
 import jakarta.persistence.*
 
