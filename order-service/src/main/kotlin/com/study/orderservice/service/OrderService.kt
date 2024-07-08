@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.reactive.function.client.WebClient
-import org.springframework.web.reactive.function.client.bodyToMono
+import org.springframework.web.util.UriBuilder
 import java.util.*
 
 /**
@@ -41,9 +41,16 @@ class OrderService @Autowired constructor(
             }
         )
 
+        val skuCodes = order.orderLineItemsList.map(OrderLineItems::skuCode).toTypedArray()
+
         //Inventory service 호출, 재고가 있으면 주문 진행
         val result = webClient.get()
-            .uri("http://localhost:8082/api/inventory/")
+            .uri{
+                uriBuilder ->
+                uriBuilder.path("htp://lcalhost:8082/api/inventory")
+                    .queryParam("skuCode", skuCodes)
+                    .build()
+            }
             .retrieve()
             .bodyToMono(Boolean::class.java)
             .block()
@@ -53,8 +60,6 @@ class OrderService @Autowired constructor(
         }else{
             throw IllegalArgumentException("Product is not in stock")
         }
-
-
     }
 
     fun mapToDto(orderLinesItemsDto: OrderLinesImtesDto):OrderLineItems{
