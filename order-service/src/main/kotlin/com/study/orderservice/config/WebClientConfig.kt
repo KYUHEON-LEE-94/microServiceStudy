@@ -19,7 +19,9 @@ import org.springframework.web.reactive.function.client.WebClient
 class WebClientConfig {
 
     @Bean
-    fun webclient():WebClient{
-        return WebClient.create()
+    fun webClient(builder: WebClient.Builder): WebClient{
+        return builder
+            .baseUrl("http://localhost:8082")
+            .build()
     }
 }

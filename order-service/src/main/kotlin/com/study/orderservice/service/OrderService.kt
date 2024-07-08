@@ -1,5 +1,6 @@
 package com.study.orderservice.service
 
+import com.study.orderservice.dto.InventoryResponse
 import com.study.orderservice.dto.OrderLinesImtesDto
 import com.study.orderservice.dto.OrderRequest
 import com.study.orderservice.model.Order
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.reactive.function.client.WebClient
-import org.springframework.web.util.UriBuilder
 import java.util.*
 
 /**
@@ -32,7 +32,7 @@ class OrderService @Autowired constructor(
 {
 
     fun placeOrder(orderRequest: OrderRequest){
-        var order:Order = Order(
+        var order = Order(
 
             orderNumber = UUID.randomUUID().toString(),
 
@@ -44,18 +44,20 @@ class OrderService @Autowired constructor(
         val skuCodes = order.orderLineItemsList.map(OrderLineItems::skuCode).toTypedArray()
 
         //Inventory service 호출, 재고가 있으면 주문 진행
-        val result = webClient.get()
-            .uri{
-                uriBuilder ->
-                uriBuilder.path("htp://lcalhost:8082/api/inventory")
-                    .queryParam("skuCode", skuCodes)
+        val inventoryResponseArray = webClient.get()
+            .uri { uriBuilder ->
+                uriBuilder
+                    .path("/api/inventory")
+                    .queryParam("skuCode", *skuCodes) //가변인자 전달
                     .build()
             }
             .retrieve()
-            .bodyToMono(Boolean::class.java)
+            .bodyToMono(Array<InventoryResponse>::class.java)
             .block()
 
-        if(result == true){
+        val allProductsInStock = inventoryResponseArray?.all { it.isInStock }
+
+        if(allProductsInStock == true){
             orderRepository.save(order)
         }else{
             throw IllegalArgumentException("Product is not in stock")
