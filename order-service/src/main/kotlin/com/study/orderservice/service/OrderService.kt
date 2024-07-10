@@ -25,9 +25,9 @@ import java.util.*
  */
 @Service
 @Transactional
-class OrderService @Autowired constructor(
-    private var orderRepository: OrderRepository,
-    private var webClient: WebClient
+class OrderService(
+    private val orderRepository: OrderRepository,
+    private val webClient: WebClient.Builder
     )
 {
 
@@ -44,7 +44,7 @@ class OrderService @Autowired constructor(
         val skuCodes = order.orderLineItemsList.map(OrderLineItems::skuCode).toTypedArray()
 
         //Inventory service 호출, 재고가 있으면 주문 진행
-        val inventoryResponseArray = webClient.get()
+        val inventoryResponseArray = webClient.build().get()
             .uri { uriBuilder ->
                 uriBuilder
                     .path("/api/inventory")
