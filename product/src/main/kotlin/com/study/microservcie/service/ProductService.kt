@@ -5,8 +5,6 @@ import com.study.microservcie.dto.ProductResponse
 import com.study.microservcie.model.Product
 import com.study.microservcie.repository.ProductRepository
 import io.github.oshai.kotlinlogging.KotlinLogging
-import lombok.extern.log4j.Log4j2
-import lombok.extern.slf4j.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
@@ -25,7 +23,7 @@ import org.springframework.stereotype.Service
 private val logger = KotlinLogging.logger{}
 
 @Service
-@Slf4j
+
 class ProductService @Autowired constructor(
     private val productRepository:ProductRepository
 ){
