@@ -14,6 +14,7 @@
 ### How To
 ![image](https://github.com/KYUHEON-LEE-94/microServiceStudy/assets/101496219/22ef289f-788a-4a31-9165-35e6667b0d3a)
 Order-service는 유동적으로 변할 수 있는 Inventory-Service를 어떻게 알아낼것인가?
+-> Discovery Service 사용 (Eureka)
 
 # API
 ##Proudct
