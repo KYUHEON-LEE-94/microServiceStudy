@@ -22,6 +22,7 @@ subprojects {
     apply(plugin = "io.spring.dependency-management")
 
     dependencies {
+        implementation("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         compileOnly("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
