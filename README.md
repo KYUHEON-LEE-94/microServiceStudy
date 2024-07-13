@@ -11,7 +11,8 @@
 - Java -> kotlin으로 코드를 변경함으로써 kotlin 문법 적응
 
 ## 목표 아키텍처
-![image](https://github.com/KYUHEON-LEE-94/microServiceStudy/assets/101496219/f3238b4f-6733-4be3-bf41-533708016b7e)
+![image](https://github.com/user-attachments/assets/a4a9ef9b-fe4f-4b73-8a66-c4083452ebe3)
+
 
 ### How To
 #### 1. Order-service는 유동적으로 변할 수 있는 Inventory-Service를 어떻게 알아낼것인가?
