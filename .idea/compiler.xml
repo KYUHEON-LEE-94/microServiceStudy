@@ -10,6 +10,7 @@
         </processorPath>
         <module name="microService.discovery-server.main" />
         <module name="microService.inventory-service.main" />
+        <module name="microService.api-gateway.main" />
         <module name="microService.order-service.main" />
         <module name="microService.product.main" />
       </profile>
