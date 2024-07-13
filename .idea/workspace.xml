@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="api-gateway 어플리케이션 추가">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="api-gateway에 order,proudoct, discovery-server 연결">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +289,7 @@
       <workItem from="1720618664805" duration="2724000" />
       <workItem from="1720621440540" duration="1134000" />
       <workItem from="1720702841977" duration="1191000" />
-      <workItem from="1720859253553" duration="3321000" />
+      <workItem from="1720859253553" duration="4113000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -390,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720860418807</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="api-gateway에 order,proudoct, discovery-server 연결">
+      <created>1720862694527</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720862694527</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,6 +432,7 @@
     <MESSAGE value="order-service의 webclient에 @LoadBalance 추가하여 다수의 inventory-service 사용 가능" />
     <MESSAGE value="testApplication 추가" />
     <MESSAGE value="api-gateway 어플리케이션 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-gateway 어플리케이션 추가" />
+    <MESSAGE value="api-gateway에 order,proudoct, discovery-server 연결" />
+    <option name="LAST_COMMIT_MESSAGE" value="api-gateway에 order,proudoct, discovery-server 연결" />
   </component>
 </project>
