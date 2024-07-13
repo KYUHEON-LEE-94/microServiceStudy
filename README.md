@@ -3,6 +3,8 @@
 - kotlin (JDK17)
 - spring boot
 - MongoDB (by Docker)
+- Eureka
+- spring cloud gateway
 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
@@ -23,7 +25,12 @@ Entry Point를 아래와 같이 변경하여 Api GateWay를 활용하여 보다 
 
 ![image](https://github.com/user-attachments/assets/4ed56f1e-a177-4d83-9161-1146013459f9)
 
-
+##### 얻을 수 있는 이점
+- Routing based on Request Headers
+- Authentication
+- Security
+- Load Balancing
+- SSL Termination
 
 # API
 ##Proudct
