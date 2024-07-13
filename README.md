@@ -60,5 +60,9 @@ POST http://localhost:8081/api/order
     }
 ```
 
-# 참고 자료
+# 공부 영상
 - https://www.youtube.com/watch?v=mPPhcU7oWDU&list=WL&index=1&t=468s
+
+# 그 외 출처
+- https://www.keycloak.org/getting-started/getting-started-docker
+- https://spring.io/projects/spring-cloud
