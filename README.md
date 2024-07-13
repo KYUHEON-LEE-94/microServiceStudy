@@ -12,9 +12,18 @@
 ![image](https://github.com/KYUHEON-LEE-94/microServiceStudy/assets/101496219/f3238b4f-6733-4be3-bf41-533708016b7e)
 
 ### How To
+#### 1. Order-service는 유동적으로 변할 수 있는 Inventory-Service를 어떻게 알아낼것인가?
 ![image](https://github.com/KYUHEON-LEE-94/microServiceStudy/assets/101496219/22ef289f-788a-4a31-9165-35e6667b0d3a)
-Order-service는 유동적으로 변할 수 있는 Inventory-Service를 어떻게 알아낼것인가?
+
 -> Discovery Service 사용 (Eureka)
+
+#### 2. Api GateWay 사용
+![image](https://github.com/user-attachments/assets/6e8351bb-7d57-43eb-a46a-2c62300c89cf)
+Entry Point를 아래와 같이 변경하여 Api GateWay를 활용하여 보다 효율적인 관리를 할 수 있도록 하자
+
+![image](https://github.com/user-attachments/assets/4ed56f1e-a177-4d83-9161-1146013459f9)
+
+
 
 # API
 ##Proudct
