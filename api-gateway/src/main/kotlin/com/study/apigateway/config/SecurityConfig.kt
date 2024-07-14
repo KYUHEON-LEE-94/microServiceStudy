@@ -4,8 +4,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity
 import org.springframework.security.config.web.server.ServerHttpSecurity
-import org.springframework.security.oauth2.jwt.NimbusReactiveJwtDecoder
-import org.springframework.security.oauth2.jwt.ReactiveJwtDecoder
 import org.springframework.security.web.server.SecurityWebFilterChain
 
 /**
@@ -32,16 +30,8 @@ class SecurityConfig {
                     .pathMatchers("/eureka/**").permitAll()
                     .anyExchange().authenticated()
             }
-            .oauth2ResourceServer { oauth2 ->
-                oauth2.jwt { jwtConfigurer ->
-                    jwtConfigurer.jwtDecoder(jwtDecoder())
-                }
+            .oauth2ResourceServer { oauth2 -> oauth2.jwt()
             }
             .build()
-    }
-
-    @Bean
-    fun jwtDecoder(): ReactiveJwtDecoder {
-        return NimbusReactiveJwtDecoder.withJwkSetUri("http://localhost:8181/realms/spring-boot-microservices-realm").build()
     }
 }
