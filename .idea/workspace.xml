@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="api-gateway에 oauth2 설정 PostMan 확인">
-      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/kotlin/com/study/discoveryserver/config/SecurityConfig.kt" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="eureka-server 접근 SecurityConfig 추가 및 client의 properties 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/kotlin/com/study/apigateway/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/kotlin/com/study/apigateway/config/SecurityConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.properties" afterDir="false" />
@@ -297,7 +293,7 @@
       <workItem from="1720621440540" duration="1134000" />
       <workItem from="1720702841977" duration="1191000" />
       <workItem from="1720859253553" duration="4113000" />
-      <workItem from="1720931018224" duration="6591000" />
+      <workItem from="1720931018224" duration="6801000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -418,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720959921635</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="eureka-server 접근 SecurityConfig 추가 및 client의 properties 수정">
+      <created>1720961869546</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720961869546</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,6 +460,7 @@
     <MESSAGE value="api-gateway에 order,proudoct, discovery-server 연결" />
     <MESSAGE value="api-gateway에 oauth2 설정 추가" />
     <MESSAGE value="api-gateway에 oauth2 설정 PostMan 확인" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-gateway에 oauth2 설정 PostMan 확인" />
+    <MESSAGE value="eureka-server 접근 SecurityConfig 추가 및 client의 properties 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="eureka-server 접근 SecurityConfig 추가 및 client의 properties 수정" />
   </component>
 </project>
