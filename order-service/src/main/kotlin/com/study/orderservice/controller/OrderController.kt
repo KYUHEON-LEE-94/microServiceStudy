@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
+import java.lang.RuntimeException
 
 /**
  *packageName    : com.study.productservice.controller
@@ -24,14 +25,20 @@ import org.springframework.web.bind.annotation.RestController
  */
 @RestController
 @RequestMapping("/api/order")
-class OrderController @Autowired constructor(
+class OrderController (
     private var orderService: OrderService
 ){
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @CircuitBreaker(name = "inventory")
+    /**inventory라는 이름의 Circuit Breaker를 사용,
+     * 만약 placeOrder 메서드에서 예외가 발생하면, fallbackMethod 메서드를 호출하여 예외 상황을 처리합니다.**/
+    @CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
     fun placeOrder(@RequestBody orderRequest: OrderRequest):String{
         orderService.placeOrder(orderRequest)
         return "Order Placed Successfully"
+    }
+
+    fun fallbackMethod(orderRequest: OrderRequest, runtimeException: RuntimeException):String{
+        return "Ops! Something went wrong, please order after some time!"
     }
 }
