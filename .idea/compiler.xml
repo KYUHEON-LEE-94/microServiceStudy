@@ -15,14 +15,20 @@
         <module name="microService.product.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="17">
+      <module name="api-gateway" target="17" />
+      <module name="api-gateway.main" target="17" />
+      <module name="api-gateway.test" target="17" />
       <module name="com.study.MicroServcie" target="17" />
       <module name="com.study.MicroServcie.main" target="17" />
       <module name="com.study.MicroServcie.test" target="17" />
       <module name="inventory-service" target="17" />
+      <module name="product" target="17" />
       <module name="product-service" target="17" />
       <module name="product-service.main" target="17" />
       <module name="product-service.test" target="17" />
+      <module name="product.main" target="17" />
+      <module name="product.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

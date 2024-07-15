@@ -9,6 +9,8 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
+extra["springCloudVersion"] = "2023.0.3"
+
 allprojects {
     repositories {
         mavenCentral()
@@ -16,13 +18,17 @@ allprojects {
     }
 }
 
+
+
 subprojects {
+    extra["springCloudVersion"] = "2023.0.3"
+
     apply(plugin = "org.jetbrains.kotlin.jvm")
     apply(plugin = "org.springframework.boot")
     apply(plugin = "io.spring.dependency-management")
 
     dependencies {
-        implementation("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
+        implementation("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         compileOnly("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
@@ -35,4 +41,11 @@ subprojects {
     tasks.withType<Test> {
         useJUnitPlatform()
     }
+
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+        }
+    }
 }
+

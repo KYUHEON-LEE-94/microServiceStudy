@@ -2,6 +2,7 @@ package com.study.orderservice.controller
 
 import com.study.orderservice.dto.OrderRequest
 import com.study.orderservice.service.OrderService
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.PostMapping
@@ -28,6 +29,7 @@ class OrderController @Autowired constructor(
 ){
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @CircuitBreaker(name = "inventory")
     fun placeOrder(@RequestBody orderRequest: OrderRequest):String{
         orderService.placeOrder(orderRequest)
         return "Order Placed Successfully"
