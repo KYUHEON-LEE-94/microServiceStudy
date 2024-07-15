@@ -52,6 +52,7 @@ Circuit Breaker의 세 가지 상태
 - 시스템 안정성 향상: 장애가 발생한 외부 서비스로의 호출을 제한함으로써 시스템 전체의 안정성을 높입니다.
 ```
 
+-> Resilience4j 를 사용
 
 # API
 ##Proudct
