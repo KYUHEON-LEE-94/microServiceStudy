@@ -30,6 +30,7 @@ subprojects {
     dependencies {
         implementation("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+        implementation("io.github.oshai:kotlin-logging-jvm:5.1.1")
         compileOnly("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
 

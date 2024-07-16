@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="fallbackMethod 추가">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="placeOrder 비동기 처리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/kotlin/com/study/inventoryservice/service/InventoryService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/kotlin/com/study/inventoryservice/service/InventoryService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/controller/OrderController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/controller/OrderController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/product/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +262,7 @@
       <workItem from="1721045140086" duration="2573000" />
       <workItem from="1721047846370" duration="1682000" />
       <workItem from="1721049584751" duration="337000" />
-      <workItem from="1721134876194" duration="1271000" />
+      <workItem from="1721134876194" duration="1938000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -409,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721049918098</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="placeOrder 비동기 처리">
+      <created>1721136171366</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1721136171366</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,6 +461,7 @@
     <MESSAGE value="eureka- client properties 수정" />
     <MESSAGE value="resilience4j 의존성 추가" />
     <MESSAGE value="fallbackMethod 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="fallbackMethod 추가" />
+    <MESSAGE value="placeOrder 비동기 처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="placeOrder 비동기 처리" />
   </component>
 </project>
