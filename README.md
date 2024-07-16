@@ -10,11 +10,38 @@
 - spring boot Microservice Project 배우기 및 활용
 - Java -> kotlin으로 코드를 변경함으로써 kotlin 문법 적응
 
-## 목표 아키텍처
+# API
+### Proudct
+
+POST http://localhost:8081/api/product
+```java
+    {
+        "name": "Iphone14",
+        "description": "Iphone 14",
+        "price": 1200
+    }
+```
+
+### Order-Srevice
+
+POST http://localhost:8081/api/order
+```java
+    {
+        "orderLineItemsDtoList": [
+            {
+                "skuCode":"iphone_14",
+                "price":1200,
+                "quantity":1
+            }
+        ]
+    }
+```
+
+# 목표 아키텍처
 ![image](https://github.com/user-attachments/assets/a4a9ef9b-fe4f-4b73-8a66-c4083452ebe3)
 
 
-### How To
+## How To
 #### 1. Order-service는 유동적으로 변할 수 있는 Inventory-Service를 어떻게 알아낼것인가?
 ![image](https://github.com/KYUHEON-LEE-94/microServiceStudy/assets/101496219/22ef289f-788a-4a31-9165-35e6667b0d3a)
 
@@ -54,32 +81,11 @@ Circuit Breaker의 세 가지 상태
 
 -> Resilience4j 를 사용
 
-# API
-##Proudct
+##### 사용 예시 화면
+![image](https://github.com/user-attachments/assets/1d26c155-8704-443f-99c4-d36674fd6cea)
 
-POST http://localhost:8081/api/product
-```java
-    {
-        "name": "Iphone14",
-        "description": "Iphone 14",
-        "price": 1200
-    }
-```
 
-Order-Srevice
 
-POST http://localhost:8081/api/order
-```java
-    {
-        "orderLineItemsDtoList": [
-            {
-                "skuCode":"iphone_14",
-                "price":1200,
-                "quantity":1
-            }
-        ]
-    }
-```
 
 # 공부 영상
 - https://www.youtube.com/watch?v=mPPhcU7oWDU&list=WL&index=1&t=468s
