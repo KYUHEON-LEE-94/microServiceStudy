@@ -31,7 +31,7 @@ class OrderService(
     )
 {
 
-    fun placeOrder(orderRequest: OrderRequest){
+    fun placeOrder(orderRequest: OrderRequest):String{
         var order = Order(
 
             orderNumber = UUID.randomUUID().toString(),
@@ -59,6 +59,7 @@ class OrderService(
 
         if(allProductsInStock == true){
             orderRepository.save(order)
+            return "Order Placed Successfully"
         }else{
             throw IllegalArgumentException("Product is not in stock")
         }

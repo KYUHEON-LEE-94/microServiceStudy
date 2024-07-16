@@ -3,6 +3,7 @@ package com.study.orderservice.controller
 import com.study.orderservice.dto.OrderRequest
 import com.study.orderservice.service.OrderService
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.PostMapping
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 import java.lang.RuntimeException
+import java.util.concurrent.CompletableFuture
 
 /**
  *packageName    : com.study.productservice.controller
@@ -30,15 +32,15 @@ class OrderController (
 ){
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    /**inventory라는 이름의 Circuit Breaker를 사용,
-     * 만약 placeOrder 메서드에서 예외가 발생하면, fallbackMethod 메서드를 호출하여 예외 상황을 처리합니다.**/
     @CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
-    fun placeOrder(@RequestBody orderRequest: OrderRequest):String{
-        orderService.placeOrder(orderRequest)
-        return "Order Placed Successfully"
+    @TimeLimiter(name= "inventory")
+    fun placeOrder(@RequestBody orderRequest: OrderRequest):CompletableFuture<String>{
+        return CompletableFuture.supplyAsync {
+            orderService.placeOrder(orderRequest)
+        }
     }
 
-    fun fallbackMethod(orderRequest: OrderRequest, runtimeException: RuntimeException):String{
-        return "Ops! Something went wrong, please order after some time!"
+    fun fallbackMethod(orderRequest: OrderRequest, runtimeException: RuntimeException):CompletableFuture<String>{
+        return CompletableFuture.supplyAsync { "Ops! Something went wrong, please order after some time!" }
     }
 }
