@@ -81,6 +81,13 @@ Circuit Breaker의 세 가지 상태
 
 -> Resilience4j 를 사용
 
+#### 4. Trace Log
+![image](https://github.com/user-attachments/assets/9a437bc6-7448-4f16-b96e-032ef8d62bbb)
+
+- 현재 Tracing이 이리저리 흩뿌려져 있다.
+- Tracd ID를 사용하여 로그를 추적하여 파악하자.
+- spring cloud sleuth를 사용하자.
+
 ##### 사용 예시 화면
 ![image](https://github.com/user-attachments/assets/1d26c155-8704-443f-99c4-d36674fd6cea)
 
