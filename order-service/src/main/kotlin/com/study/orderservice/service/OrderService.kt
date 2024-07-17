@@ -27,7 +27,7 @@ import java.util.*
 @Transactional
 class OrderService(
     private val orderRepository: OrderRepository,
-    private val webClient: WebClient.Builder
+    private val webClient: WebClient.Builder,
     )
 {
 
