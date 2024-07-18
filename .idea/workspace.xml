@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="공통모듈화">
-      <change afterPath="$PROJECT_DIR$/run_docker_containers.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="docker container script 추가">
+      <change afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_docker_containers.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.ps1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +113,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\dockerScropt" />
+    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.study.orderservice.dto" />
     </key>
@@ -263,7 +264,7 @@
       <workItem from="1721049584751" duration="337000" />
       <workItem from="1721134876194" duration="2306000" />
       <workItem from="1721223044968" duration="2336000" />
-      <workItem from="1721290529502" duration="1842000" />
+      <workItem from="1721290529502" duration="2658000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -433,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721137180711</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="docker container script 추가">
+      <created>1721293365324</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1721293365324</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,6 +487,7 @@
     <MESSAGE value="placeOrder 비동기 처리" />
     <MESSAGE value="추가 resilience4j 설정 테스트" />
     <MESSAGE value="properties logging.level 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="properties logging.level 추가" />
+    <MESSAGE value="docker container script 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker container script 추가" />
   </component>
 </project>
