@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="micrometer:micrometer, zipkin 추가">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="container 가 있는 경우는 그냥 실행 없는 경우 생성 구문 추가">
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/dto/OrderResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerScript/run_docker_containers.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerScript/run_docker_containers.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/kotlin/com/study/inventoryservice/service/InventoryService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/kotlin/com/study/inventoryservice/service/InventoryService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/controller/OrderController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/controller/OrderController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/dto/OrderRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/dto/OrderRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +78,9 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -266,7 +272,7 @@
       <workItem from="1721134876194" duration="2306000" />
       <workItem from="1721223044968" duration="2336000" />
       <workItem from="1721290529502" duration="2658000" />
-      <workItem from="1721307176560" duration="303000" />
+      <workItem from="1721307176560" duration="2372000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -443,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721293365324</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="container 가 있는 경우는 그냥 실행 없는 경우 생성 구문 추가">
+      <created>1721307677490</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721307677490</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,6 +503,7 @@
     <MESSAGE value="추가 resilience4j 설정 테스트" />
     <MESSAGE value="properties logging.level 추가" />
     <MESSAGE value="docker container script 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker container script 추가" />
+    <MESSAGE value="container 가 있는 경우는 그냥 실행 없는 경우 생성 구문 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="container 가 있는 경우는 그냥 실행 없는 경우 생성 구문 추가" />
   </component>
 </project>

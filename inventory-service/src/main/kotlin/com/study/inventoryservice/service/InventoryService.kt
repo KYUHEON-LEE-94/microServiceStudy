@@ -30,9 +30,9 @@ class InventoryService @Autowired constructor(
     @SneakyThrows /*Checked Exception를 메서드 시그니처에 명시적으로 선언하지 않고도 예외를 던질 수 있음*/
     fun isInStock(skuCode:List<String>):List<InventoryResponse>{
 
-        logger.atInfo { "Wait! Started" }
+        logger.info { "Wait! Started" }
         Thread.sleep(10000)
-        logger.atInfo { "Wait Ended" }
+        logger.info { "Wait Ended" }
 
         return inventoryRepository.findBySkuCodeIn(skuCode)
             .map { inventory ->  InventoryResponse().apply {

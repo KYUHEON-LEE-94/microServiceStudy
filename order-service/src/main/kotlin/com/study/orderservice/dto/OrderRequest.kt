@@ -12,5 +12,5 @@ package com.study.orderservice.dto
  * 2024-07-06        LEE KYUHEON       최초 생성
  */
 data class OrderRequest (
-    var orderLineItemsDtoList: List<OrderLinesImtesDto>
+    var orderLineItemsDtoList: List<OrderLinesImtesDto> = emptyList()
 )

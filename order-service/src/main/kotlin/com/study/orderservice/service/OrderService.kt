@@ -3,6 +3,7 @@ package com.study.orderservice.service
 import com.study.orderservice.dto.InventoryResponse
 import com.study.orderservice.dto.OrderLinesImtesDto
 import com.study.orderservice.dto.OrderRequest
+import com.study.orderservice.dto.OrderResponse
 import com.study.orderservice.model.Order
 import com.study.orderservice.model.OrderLineItems
 import com.study.orderservice.repository.OrderRepository
@@ -30,6 +31,13 @@ class OrderService(
     private val webClient: WebClient.Builder,
     )
 {
+
+    fun getOrderList():List<OrderResponse>{
+        return orderRepository.findAll().map { order ->
+            mapToDto(order)
+        }
+
+    }
 
     fun placeOrder(orderRequest: OrderRequest):String{
         var order = Order(
@@ -70,6 +78,15 @@ class OrderService(
             price = orderLinesItemsDto.price
             quantity = orderLinesItemsDto.quantity
             skuCode = orderLinesItemsDto.skuCode
+        }
+        return apply
+    }
+
+    fun mapToDto(order: Order):OrderResponse{
+        val apply = OrderResponse().apply {
+            id = order.id
+            orderNumber = order.orderNumber
+            orderLineItemsList = order.orderLineItemsList
         }
         return apply
     }
