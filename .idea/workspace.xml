@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="docker container script 추가">
-      <change afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.sh" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="micrometer:micrometer, zipkin 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_docker_containers.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerScript/run_docker_containers.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerScript/run_docker_containers.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerScript/run_docker_containers.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +85,7 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -106,7 +107,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "3c467d469208b1c9c3837d611efe70c7"
+    "spring.configuration.checksum": "65f10746b19d984ab8373dc4179f012a"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -265,6 +266,7 @@
       <workItem from="1721134876194" duration="2306000" />
       <workItem from="1721223044968" duration="2336000" />
       <workItem from="1721290529502" duration="2658000" />
+      <workItem from="1721307176560" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
