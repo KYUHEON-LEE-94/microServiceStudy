@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="order Get API 추가">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="circuitBreaker 주석 후 Zipkin 확인">
+      <change afterPath="$PROJECT_DIR$/dockerScript/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/kotlin/com/study/inventoryservice/service/InventoryService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/kotlin/com/study/inventoryservice/service/InventoryService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/controller/OrderController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/controller/OrderController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +269,7 @@
       <workItem from="1721223044968" duration="2336000" />
       <workItem from="1721290529502" duration="2658000" />
       <workItem from="1721307176560" duration="2460000" />
-      <workItem from="1721397265761" duration="1055000" />
+      <workItem from="1721397265761" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -462,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721309656156</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="circuitBreaker 주석 후 Zipkin 확인">
+      <created>1721398426480</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1721398426480</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +490,6 @@
       <path value="$PROJECT_DIR$/discovery-server" />
       <path value="$PROJECT_DIR$/api-gateway" />
     </ignored-roots>
-    <MESSAGE value="TestContainers 의존성 추가및 기본 세팅" />
     <MESSAGE value="README 위치 변경" />
     <MESSAGE value="post Save Test 생성" />
     <MESSAGE value="post Save Test Assert까지 성공" />
@@ -510,6 +514,7 @@
     <MESSAGE value="docker container script 추가" />
     <MESSAGE value="container 가 있는 경우는 그냥 실행 없는 경우 생성 구문 추가" />
     <MESSAGE value="order Get API 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="order Get API 추가" />
+    <MESSAGE value="circuitBreaker 주석 후 Zipkin 확인" />
+    <option name="LAST_COMMIT_MESSAGE" value="circuitBreaker 주석 후 Zipkin 확인" />
   </component>
 </project>
