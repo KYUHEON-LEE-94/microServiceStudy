@@ -5,15 +5,23 @@
 - MongoDB (by Docker)
 - Eureka
 - spring cloud gateway
+- keyCloak (by Docker)
+- resilience4j (circuitbreaker)
+- zipkin (by Docker)
 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
 - Java -> kotlin으로 코드를 변경함으로써 kotlin 문법 적응
 
+# Docker Script
+- dockerScript 폴더 아래에 있는 .ps1, sh 스크립트로 Docker 컨테이너 생성 및 실행 가능
+  - powerShell: run_docker_containers.ps1
+  - Linux: run_docker_containers.sh
+
 # API
 ### Proudct
 
-POST http://localhost:8081/api/product
+POST http://localhost:8080/api/product
 ```java
     {
         "name": "Iphone14",
@@ -24,7 +32,7 @@ POST http://localhost:8081/api/product
 
 ### Order-Srevice
 
-POST http://localhost:8081/api/order
+POST http://localhost:8080/api/order
 ```java
     {
         "orderLineItemsDtoList": [
@@ -61,6 +69,8 @@ Entry Point를 아래와 같이 변경하여 Api GateWay를 활용하여 보다 
 - SSL Termination
 
 #### 3. Circuit Breaker
+- Resilience4j 를 사용
+  
 ![image](https://github.com/user-attachments/assets/c9cf7125-7ceb-4eca-9d2f-41818b353052)
 ```
 Circuit Breaker?:
@@ -78,8 +88,6 @@ Circuit Breaker의 세 가지 상태
 - 자동 복구: 외부 서비스가 복구되었는지 주기적으로 확인하여 자동으로 시스템을 정상 상태로 되돌립니다.
 - 시스템 안정성 향상: 장애가 발생한 외부 서비스로의 호출을 제한함으로써 시스템 전체의 안정성을 높입니다.
 ```
-
--> Resilience4j 를 사용
 
 #### 4. Trace Log
 ![image](https://github.com/user-attachments/assets/9a437bc6-7448-4f16-b96e-032ef8d62bbb)
