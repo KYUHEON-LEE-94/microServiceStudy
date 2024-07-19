@@ -4,12 +4,14 @@ import com.study.orderservice.dto.InventoryResponse
 import com.study.orderservice.dto.OrderLinesImtesDto
 import com.study.orderservice.dto.OrderRequest
 import com.study.orderservice.dto.OrderResponse
+import com.study.orderservice.event.OrderPlacedEvent
 import com.study.orderservice.model.Order
 import com.study.orderservice.model.OrderLineItems
 import com.study.orderservice.repository.OrderRepository
 import io.github.oshai.kotlinlogging.KotlinLogging
 import io.micrometer.tracing.Tracer
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.reactive.function.client.WebClient
@@ -34,7 +36,8 @@ private val logger = KotlinLogging.logger{}
 class OrderService(
     private val orderRepository: OrderRepository,
     private val webClient: WebClient.Builder,
-    private val tracer: Tracer
+    private val tracer: Tracer,
+    private val kafkaTemplate: KafkaTemplate<String, OrderPlacedEvent>
     )
 {
 
@@ -76,6 +79,8 @@ class OrderService(
 
                 if (allProductsInStock == true) {
                     orderRepository.save(order)
+                    kafkaTemplate.send("notificationTopic", OrderPlacedEvent().apply { orderNumber= order.orderNumber} )
+                    logger.info { "Order placed successfully with order number: ${order.orderNumber}" }
                     return "Order Placed Successfully"
                 } else {
                     throw IllegalArgumentException("Product is not in stock")
@@ -87,9 +92,6 @@ class OrderService(
         } finally {
             inventoryServiceLookup.end()
         }
-
-
-
     }
 
     fun mapToDto(orderLinesItemsDto: OrderLinesImtesDto):OrderLineItems{
