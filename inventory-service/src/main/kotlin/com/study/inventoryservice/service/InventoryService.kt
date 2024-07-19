@@ -31,7 +31,7 @@ class InventoryService @Autowired constructor(
     fun isInStock(skuCode:List<String>):List<InventoryResponse>{
 
         logger.info { "Wait! Started" }
-        Thread.sleep(10000)
+        //Thread.sleep(10000)
         logger.info { "Wait Ended" }
 
         return inventoryRepository.findBySkuCodeIn(skuCode)

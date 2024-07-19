@@ -7,6 +7,8 @@ import com.study.orderservice.dto.OrderResponse
 import com.study.orderservice.model.Order
 import com.study.orderservice.model.OrderLineItems
 import com.study.orderservice.repository.OrderRepository
+import io.github.oshai.kotlinlogging.KotlinLogging
+import io.micrometer.tracing.Tracer
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -24,11 +26,15 @@ import java.util.*
  * -----------------------------------------------------------
  * 2024-07-06        LEE KYUHEON       최초 생성
  */
+
+private val logger = KotlinLogging.logger{}
+
 @Service
 @Transactional
 class OrderService(
     private val orderRepository: OrderRepository,
     private val webClient: WebClient.Builder,
+    private val tracer: Tracer
     )
 {
 
@@ -50,27 +56,40 @@ class OrderService(
         )
 
         val skuCodes = order.orderLineItemsList.map(OrderLineItems::skuCode).toTypedArray()
+        val inventoryServiceLookup = tracer.nextSpan().name("InventoryServiceLookup")
 
-        //Inventory service 호출, 재고가 있으면 주문 진행
-        val inventoryResponseArray = webClient.build().get()
-            .uri { uriBuilder ->
-                uriBuilder
-                    .path("/api/inventory")
-                    .queryParam("skuCode", *skuCodes) //가변인자 전달
-                    .build()
+        try {
+            tracer.withSpan(inventoryServiceLookup.start()).use { _ ->
+                // Inventory service 호출, 재고가 있으면 주문 진행
+                val inventoryResponseArray = webClient.build().get()
+                    .uri { uriBuilder ->
+                        uriBuilder
+                            .path("/api/inventory")
+                            .queryParam("skuCode", *skuCodes) // 가변인자 전달
+                            .build()
+                    }
+                    .retrieve()
+                    .bodyToMono(Array<InventoryResponse>::class.java)
+                    .block()
+
+                val allProductsInStock = inventoryResponseArray?.all { it.isInStock }
+
+                if (allProductsInStock == true) {
+                    orderRepository.save(order)
+                    return "Order Placed Successfully"
+                } else {
+                    throw IllegalArgumentException("Product is not in stock")
+                }
             }
-            .retrieve()
-            .bodyToMono(Array<InventoryResponse>::class.java)
-            .block()
-
-        val allProductsInStock = inventoryResponseArray?.all { it.isInStock }
-
-        if(allProductsInStock == true){
-            orderRepository.save(order)
-            return "Order Placed Successfully"
-        }else{
-            throw IllegalArgumentException("Product is not in stock")
+        } catch (ex: Exception) {
+            logger.error(ex) { "Error placing order" }
+            throw ex
+        } finally {
+            inventoryServiceLookup.end()
         }
+
+
+
     }
 
     fun mapToDto(orderLinesItemsDto: OrderLinesImtesDto):OrderLineItems{

@@ -46,9 +46,9 @@ class OrderController (
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
-    @TimeLimiter(name= "inventory")
-    @Retry(name="inventory")
+    //@CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
+    //@TimeLimiter(name= "inventory")
+    //@Retry(name="inventory")
     fun placeOrder(@RequestBody orderRequest: OrderRequest):CompletableFuture<String>{
         logger.info{"Place order IN"}
         return CompletableFuture.supplyAsync {
