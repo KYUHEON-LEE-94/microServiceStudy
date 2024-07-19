@@ -1,30 +1,44 @@
 #!/bin/bash
 
-# Function to start or create a Docker container
-start_or_create_container() {
-    local container_name=$1
-    local run_command=$2
+# Function to start a container if it is not running
+start_container_if_not_running() {
+    CONTAINER_NAME=$1
+    IMAGE=$2
+    PORT_MAPPING=$3
+    ENV_VARS=$4
 
-    if [ "$(docker ps -a -q -f name=${container_name})" ]; then
-        echo "Starting existing container: ${container_name}..."
-        docker start ${container_name}
+    if [ "$(docker ps -q -f name=$CONTAINER_NAME)" ]; then
+        echo "$CONTAINER_NAME is already running."
+    elif [ "$(docker ps -aq -f status=exited -f name=$CONTAINER_NAME)" ]; then
+        echo "$CONTAINER_NAME exists but is not running. Starting it..."
+        docker start $CONTAINER_NAME
     else
-        echo "Creating and starting new container: ${container_name}..."
-        eval ${run_command}
+        echo "$CONTAINER_NAME does not exist. Creating and starting it..."
+        docker run -d --name $CONTAINER_NAME $PORT_MAPPING $ENV_VARS $IMAGE
     fi
 }
 
-# Zipkin 컨테이너 실행 또는 생성
-start_or_create_container "zipkinCon" "docker run -d --name zipkinCon -p 9411:9411 openzipkin/zipkin"
+# Start Zipkin container
+start_container_if_not_running "zipkinCon" "openzipkin/zipkin" "-p 9411:9411" ""
 
-# Keycloak 컨테이너 실행 또는 생성
-start_or_create_container "keycloakCon" "docker run -d --name keycloakCon -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:25.0.1 start-dev"
+# Start Keycloak container
+start_container_if_not_running "keycloakCon" "quay.io/keycloak/keycloak:25.0.1" "-p 8080:8080" "-e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin"
 
-# MongoDB 컨테이너 실행 또는 생성
-start_or_create_container "mongo" "docker run -d --name mongo -p 27017:27017 -e MONGO_INITDB_DATABASE=product-service mongo"
+# Start MongoDB container
+start_container_if_not_running "mongo" "mongo" "-p 27017:27017" "-e MONGO_INITDB_DATABASE=product-service"
 
-# MySQL 컨테이너 실행 또는 생성 (order-service)
-start_or_create_container "mysql-container" "docker run -d --name mysql-container -e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=oder-service -p 3306:3306 mysql:latest"
+# Start MySQL container for order-service
+start_container_if_not_running "mysql-container" "mysql:latest" "-p 3306:3306" "-e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=oder-service"
 
-# MySQL 컨테이너 실행 또는 생성 (inventory-service)
-start_or_create_container "mysql-container2" "docker run -d --name mysql-container2 -e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=inventory-service -p 3307:3306 mysql:latest"
+# Start MySQL container for inventory-service
+start_container_if_not_running "mysql-container2" "mysql:latest" "-p 3307:3306" "-e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=inventory-service"
+
+# Check if Docker Compose containers are running and start them if not
+if [ "$(docker-compose ps -q)" ]; then
+    echo "Docker Compose containers are already running."
+else
+    echo "Starting Docker Compose containers..."
+    docker-compose up -d
+fi
+
+echo "All containers started successfully."
