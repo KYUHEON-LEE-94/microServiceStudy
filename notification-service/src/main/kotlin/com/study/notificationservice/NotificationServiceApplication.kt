@@ -10,7 +10,7 @@ private val logger = KotlinLogging.logger{}
 
 @SpringBootApplication
 class NotificationServiceApplication{
-    @KafkaListener(topics = ["notificationTopic"])
+    @KafkaListener(topics = ["notificationTopic"],  groupId = "notificationId")
     fun handleNotification(orderPlacedEvent:OrderPlacedEvent){
         //send out an email notification
 
