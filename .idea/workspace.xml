@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="kafka 의존성 추가및 kafkaTemplate 사용">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="notification 모듈 추가">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -284,6 +284,7 @@
       <workItem from="1721290529502" duration="2658000" />
       <workItem from="1721307176560" duration="2460000" />
       <workItem from="1721397265761" duration="4141000" />
+      <workItem from="1721484535298" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -502,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721400467470</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="notification 모듈 추가">
+      <created>1721484578271</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1721484578271</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +534,6 @@
       <path value="$PROJECT_DIR$/api-gateway" />
       <path value="$PROJECT_DIR$/notification-service" />
     </ignored-roots>
-    <MESSAGE value="product-service -&gt; order-service" />
     <MESSAGE value="OrderLineItems 추가" />
     <MESSAGE value="discovery-server 모듈 추가" />
     <MESSAGE value="eureka-client 등록" />
@@ -551,6 +558,7 @@
     <MESSAGE value="kafka docker-compose.yml 추가" />
     <MESSAGE value="kafka docker-compose.yml 추가에 따른 script 변경" />
     <MESSAGE value="kafka 의존성 추가및 kafkaTemplate 사용" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka 의존성 추가및 kafkaTemplate 사용" />
+    <MESSAGE value="notification 모듈 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="notification 모듈 추가" />
   </component>
 </project>
