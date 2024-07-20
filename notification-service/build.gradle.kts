@@ -25,6 +25,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.1.2")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="notification 모듈 추가">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="notification-service 의존성 정리">
       <change afterPath="$PROJECT_DIR$/notification-service/src/main/kotlin/com/study/notificationservice/event/OrderPlacedEvent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/kotlin/com/study/notificationservice/NotificationServiceApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/kotlin/com/study/notificationservice/NotificationServiceApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +297,7 @@
       <workItem from="1721290529502" duration="2658000" />
       <workItem from="1721307176560" duration="2460000" />
       <workItem from="1721397265761" duration="4141000" />
-      <workItem from="1721484535298" duration="451000" />
+      <workItem from="1721484535298" duration="1840000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -532,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721484645288</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="notification-service 의존성 정리">
+      <created>1721485019367</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1721485019367</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +561,6 @@
       <path value="$PROJECT_DIR$/api-gateway" />
       <path value="$PROJECT_DIR$/notification-service" />
     </ignored-roots>
-    <MESSAGE value="OrderLineItems 추가" />
     <MESSAGE value="discovery-server 모듈 추가" />
     <MESSAGE value="eureka-client 등록" />
     <MESSAGE value="inventory-service 다중 실행 설정" />
@@ -581,6 +585,7 @@
     <MESSAGE value="kafka docker-compose.yml 추가에 따른 script 변경" />
     <MESSAGE value="kafka 의존성 추가및 kafkaTemplate 사용" />
     <MESSAGE value="notification 모듈 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification 모듈 추가" />
+    <MESSAGE value="notification-service 의존성 정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="notification-service 의존성 정리" />
   </component>
 </project>
