@@ -10,7 +10,6 @@ import com.study.orderservice.model.OrderLineItems
 import com.study.orderservice.repository.OrderRepository
 import io.github.oshai.kotlinlogging.KotlinLogging
 import io.micrometer.tracing.Tracer
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

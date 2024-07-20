@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="kafka docker-compose.yml 추가에 따른 script 변경">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/event/OrderPlacedEvent.kt" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="kafka 의존성 추가및 kafkaTemplate 사용">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/kotlin/com/study/orderservice/service/OrderService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -30,6 +30,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/inventory-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/notification-service">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/order-service">
@@ -213,6 +216,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="notification-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.notificationservice.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="microService.order-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.orderservice.OrderServiceApplication" />
@@ -230,6 +240,7 @@
     <list>
       <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
       <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
       <item itemvalue="Spring Boot.ProductApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayApplication (1)" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication (1)" />
@@ -272,7 +283,7 @@
       <workItem from="1721223044968" duration="2336000" />
       <workItem from="1721290529502" duration="2658000" />
       <workItem from="1721307176560" duration="2460000" />
-      <workItem from="1721397265761" duration="3138000" />
+      <workItem from="1721397265761" duration="4141000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -484,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721399700429</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="kafka 의존성 추가및 kafkaTemplate 사용">
+      <created>1721400467470</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1721400467470</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,8 +524,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/discovery-server" />
       <path value="$PROJECT_DIR$/api-gateway" />
+      <path value="$PROJECT_DIR$/notification-service" />
     </ignored-roots>
-    <MESSAGE value="post Save Test Assert까지 성공" />
     <MESSAGE value="product-service -&gt; order-service" />
     <MESSAGE value="OrderLineItems 추가" />
     <MESSAGE value="discovery-server 모듈 추가" />
@@ -532,6 +550,7 @@
     <MESSAGE value="circuitBreaker 주석 후 Zipkin 확인" />
     <MESSAGE value="kafka docker-compose.yml 추가" />
     <MESSAGE value="kafka docker-compose.yml 추가에 따른 script 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka docker-compose.yml 추가에 따른 script 변경" />
+    <MESSAGE value="kafka 의존성 추가및 kafkaTemplate 사용" />
+    <option name="LAST_COMMIT_MESSAGE" value="kafka 의존성 추가및 kafkaTemplate 사용" />
   </component>
 </project>
