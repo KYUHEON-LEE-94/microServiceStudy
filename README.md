@@ -1,19 +1,26 @@
 # microServiceStudy
 # 재원
+## Language & FrameWork
 - kotlin (JDK17)
 - spring boot
+## DB
 - MongoDB (by Docker)
+-  MySql
+## Tools
 - Eureka
 - spring cloud gateway
 - keyCloak (by Docker)
 - resilience4j (circuitbreaker)
 - zipkin (by Docker)
+- kafka
 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
 - Java -> kotlin으로 코드를 변경함으로써 kotlin 문법 적응
+- 다양한 Tool 학습
+- kuernetes 실전 적용
 
-# Docker Script
+# Provisioning
 - dockerScript 폴더 아래에 있는 .ps1, sh 스크립트로 Docker 컨테이너 생성 및 실행 가능
   - powerShell: run_docker_containers.ps1
   - Linux: run_docker_containers.sh
@@ -22,6 +29,7 @@
 ### Proudct
 
 POST http://localhost:8080/api/product
+- Request
 ```java
     {
         "name": "Iphone14",
@@ -32,7 +40,8 @@ POST http://localhost:8080/api/product
 
 ### Order-Srevice
 
-POST http://localhost:8080/api/order
+GET http://localhost:8080/api/order
+- Response
 ```java
     {
         "orderLineItemsDtoList": [
@@ -43,6 +52,24 @@ POST http://localhost:8080/api/order
             }
         ]
     }
+```
+
+POST http://localhost:8080/api/order
+- Request
+```java
+    {
+        "orderLineItemsDtoList": [
+            {
+                "skuCode":"iphone_14",
+                "price":1200,
+                "quantity":1
+            }
+        ]
+    }
+```
+-Response
+```text
+Order Placed Successfully
 ```
 
 # 목표 아키텍처
@@ -57,7 +84,9 @@ POST http://localhost:8080/api/order
 
 #### 2. Api GateWay 사용
 ![image](https://github.com/user-attachments/assets/6e8351bb-7d57-43eb-a46a-2c62300c89cf)
+
 Entry Point를 아래와 같이 변경하여 Api GateWay를 활용하여 보다 효율적인 관리를 할 수 있도록 하자
+
 
 ![image](https://github.com/user-attachments/assets/4ed56f1e-a177-4d83-9161-1146013459f9)
 
@@ -98,7 +127,6 @@ Circuit Breaker의 세 가지 상태
 
 ##### 사용 예시 화면
 ![image](https://github.com/user-attachments/assets/1d26c155-8704-443f-99c4-d36674fd6cea)
-
 
 
 
