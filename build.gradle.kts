@@ -18,6 +18,17 @@ allprojects {
     }
 }
 
+sourceSets {
+    test {
+        kotlin {
+            srcDir("src/test/kotlin")
+        }
+        resources {
+            srcDir("src/test/resources")
+        }
+    }
+}
+
 
 
 subprojects {
@@ -36,10 +47,6 @@ subprojects {
         implementation("io.zipkin.reporter2:zipkin-reporter-brave")
         compileOnly("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
-
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
-        testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-        testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     }
 
     tasks.withType<Test> {

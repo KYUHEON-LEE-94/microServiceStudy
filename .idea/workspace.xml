@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="notification-service properties 설정">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="notification-service consuemer 연결 확인">
+      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/kotlin/com/study/notificationservice/NotificationServiceApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/kotlin/com/study/notificationservice/NotificationServiceApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +57,33 @@
         <task path="$PROJECT_DIR$/product">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/api-gateway">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="microService" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="microService" type="f1a62948:ProjectNode" />
+                <item name="api-gateway" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="microService" type="f1a62948:ProjectNode" />
+                <item name="api-gateway" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="microService" type="f1a62948:ProjectNode" />
+                <item name="api-gateway" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -113,7 +139,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "4e38a1aa51f878ebb32345b97fa751cb"
+    "spring.configuration.checksum": "6ded265aadc24481d43a347bce6d29bd"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -138,7 +164,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
+  <component name="RunManager" selected="Gradle.microService:api-gateway [bootJar]">
     <configuration name="MicroServcieApplicationTests.shouldCreateProduct" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -179,6 +205,69 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="microService:api-gateway [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="microService:api-gateway [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="microService:api-gateway [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -247,6 +336,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.microService:api-gateway [bootJar]" />
+      <item itemvalue="Gradle.microService:api-gateway [build]" />
+      <item itemvalue="Gradle.microService:api-gateway [clean]" />
       <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
       <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
       <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
@@ -259,6 +351,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.microService:api-gateway [bootJar]" />
+        <item itemvalue="Gradle.microService:api-gateway [clean]" />
+        <item itemvalue="Gradle.microService:api-gateway [build]" />
         <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
         <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
       </list>
@@ -294,7 +389,8 @@
       <workItem from="1721290529502" duration="2658000" />
       <workItem from="1721307176560" duration="2460000" />
       <workItem from="1721397265761" duration="4141000" />
-      <workItem from="1721484535298" duration="2578000" />
+      <workItem from="1721484535298" duration="3376000" />
+      <workItem from="1721563473125" duration="1794000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -541,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721486427077</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="notification-service consuemer 연결 확인">
+      <created>1721487404024</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1721487404024</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +668,6 @@
       <path value="$PROJECT_DIR$/api-gateway" />
       <path value="$PROJECT_DIR$/notification-service" />
     </ignored-roots>
-    <MESSAGE value="eureka-client 등록" />
     <MESSAGE value="inventory-service 다중 실행 설정" />
     <MESSAGE value="order-service의 webclient에 @LoadBalance 추가하여 다수의 inventory-service 사용 가능" />
     <MESSAGE value="testApplication 추가" />
@@ -590,6 +692,7 @@
     <MESSAGE value="notification 모듈 추가" />
     <MESSAGE value="notification-service 의존성 정리" />
     <MESSAGE value="notification-service properties 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification-service properties 설정" />
+    <MESSAGE value="notification-service consuemer 연결 확인" />
+    <option name="LAST_COMMIT_MESSAGE" value="notification-service consuemer 연결 확인" />
   </component>
 </project>
