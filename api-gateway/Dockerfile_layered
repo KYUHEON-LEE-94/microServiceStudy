@@ -1,0 +1,19 @@
+FROM eclipse-temurin:17.0.4.1_1-jre as builder
+# Docker 컨테이너 내부의 extracted
+WORKDIR extracted
+ADD  build/libs/*.jar app.jar
+# layertools 모드를 사용하여 JAR 파일을 추출
+RUN java -Djarmode=layertools -jar app.jar extract
+
+FROM eclipse-temurin:17.0.4.1_1-jre
+WORKDIR application
+# builder 단계에서 추출된 파일들을 현재 단계로 복사
+COPY --from=builder extracted/dependencies/ ./
+COPY --from=builder extracted/spring-boot-loader/ ./
+COPY --from=builder extracted/snapshot-dependencies/ ./
+COPY --from=builder extracted/application/ ./
+EXPOSE 8080
+# Spring Boot 애플리케이션을 실행하기 위한 기본 명령어를 설정
+ENTRYPOINT ["java","org.springframework.boot.loader.JarLauncher"]
+
+# docker build -t apigateway-dockerfile .

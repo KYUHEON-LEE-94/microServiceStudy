@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="notification-service consuemer 연결 확인">
-      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="apigateway Dockerfile 생성">
+      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile_layered" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +128,7 @@
     "WebServerToolWindowFactoryState": "false",
     "deletionFromPopupRequiresConfirmation": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/inventory-service",
+    "last_opened_file_path": "C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/api-gateway",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "모듈",
     "project.structure.proportion": "0.15",
@@ -146,6 +141,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LEE KYUHEON\Desktop\Web_Develpment\공부 폴더\kotlin_project\microService\api-gateway" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\dockerScropt" />
     </key>
@@ -390,7 +388,7 @@
       <workItem from="1721307176560" duration="2460000" />
       <workItem from="1721397265761" duration="4141000" />
       <workItem from="1721484535298" duration="3376000" />
-      <workItem from="1721563473125" duration="1794000" />
+      <workItem from="1721563473125" duration="3061000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -644,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721487404024</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="apigateway Dockerfile 생성">
+      <created>1721568157838</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1721568157838</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -668,7 +673,6 @@
       <path value="$PROJECT_DIR$/api-gateway" />
       <path value="$PROJECT_DIR$/notification-service" />
     </ignored-roots>
-    <MESSAGE value="inventory-service 다중 실행 설정" />
     <MESSAGE value="order-service의 webclient에 @LoadBalance 추가하여 다수의 inventory-service 사용 가능" />
     <MESSAGE value="testApplication 추가" />
     <MESSAGE value="api-gateway 어플리케이션 추가" />
@@ -693,6 +697,7 @@
     <MESSAGE value="notification-service 의존성 정리" />
     <MESSAGE value="notification-service properties 설정" />
     <MESSAGE value="notification-service consuemer 연결 확인" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification-service consuemer 연결 확인" />
+    <MESSAGE value="apigateway Dockerfile 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="apigateway Dockerfile 생성" />
   </component>
 </project>
