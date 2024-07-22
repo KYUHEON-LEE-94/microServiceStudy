@@ -4,36 +4,28 @@ plugins {
     kotlin("jvm") version "1.9.24"
     id("org.springframework.boot") version "3.3.1"
     id("io.spring.dependency-management") version "1.1.5"
-    id("com.google.cloud.tools.jib") version "3.2.1"
+    id("com.google.cloud.tools.jib") version "3.3.1"
 }
 
-jib {
-    from {
-        image = "eclipse-temurin:17.0.4.1_1-jre"
-    }
-    to {
-        image = "maizurzu/default/${project.name}"
-        tags = setOf("latest")
-    }
-    container {
-        jvmFlags = listOf("-Xms512m", "-Xmx1024m")
-    }
-    // docker login
-    // ./gradlew build jib
-}
-
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
-}
-
-group = "org.example"
-version = "1.0-SNAPSHOT"
 
 extra["springCloudVersion"] = "2023.0.3"
 
 allprojects {
+    apply(plugin = "com.google.cloud.tools.jib")
+    apply(plugin = "org.jetbrains.kotlin.jvm")
+    apply(plugin = "org.springframework.boot")
+    apply(plugin = "io.spring.dependency-management")
+
+    group = "org.example"
+    version = "1.0-SNAPSHOT"
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+
+
     repositories {
         mavenCentral()
         maven("https://repo.spring.io/release")
@@ -54,11 +46,8 @@ sourceSets {
 
 
 subprojects {
-    extra["springCloudVersion"] = "2023.0.3"
 
-    apply(plugin = "org.jetbrains.kotlin.jvm")
-    apply(plugin = "org.springframework.boot")
-    apply(plugin = "io.spring.dependency-management")
+    extra["springCloudVersion"] = "2023.0.3"
 
     dependencies {
         implementation("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
@@ -80,6 +69,23 @@ subprojects {
         imports {
             mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
         }
+    }
+
+
+    jib {
+        from {
+            image = "eclipse-temurin:17.0.4.1_1-jre"
+        }
+        to {
+            image = "maizurzu/${project.name}"
+            tags = setOf("latest")
+        }
+        container {
+            jvmFlags = listOf("-Xms512m", "-Xmx1024m")
+            mainClass = "com.study.${project.name}"
+        }
+        // docker login
+        // ./gradlew jib --image=maizurzu/${project.name}:latest
     }
 }
 

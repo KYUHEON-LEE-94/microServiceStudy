@@ -5,6 +5,6 @@ pluginManagement {
     }
 
 }
-rootProject.name = "microService"
+rootProject.name = "microservice"
 include(":order-service", ":inventory-service", ":product", ":discovery-server", ":api-gateway", ":notification-service")
 

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="apigateway Dockerfile_layered 생성">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="jib 추가하여 docker build 설정 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,16 +61,16 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="microService" type="f1a62948:ProjectNode" />
+                <item name="microservice" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="microService" type="f1a62948:ProjectNode" />
+                <item name="microservice" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="microService" type="f1a62948:ProjectNode" />
+                <item name="microservice" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="jib" type="c8890929:TasksNode$1" />
               </path>
@@ -109,28 +109,28 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/api-gateway&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;6ded265aadc24481d43a347bce6d29bd&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/api-gateway",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "705b0035bfd3f09e21e8582077a6aa13"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -157,23 +157,23 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.microService [jib]">
-    <configuration name="'microService.inventory-service'에 있는 테스트" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="microService [jibDockerBuild]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":inventory-service:test" />
+            <option value="jibDockerBuild" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -276,14 +276,14 @@
       </method>
     </configuration>
     <configuration name="ApiGatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="microService.api-gateway.main" />
+      <module name="microservice.api-gateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.apigateway.ApiGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="DiscoveryServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="microService.discovery-server.main" />
+      <module name="microservice.discovery-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.discoveryserver.DiscoveryServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -291,14 +291,14 @@
     </configuration>
     <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
       <option name="ACTIVE_PROFILES" />
-      <module name="microService.inventory-service.main" />
+      <module name="microservice.inventory-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.inventoryservice.InventoryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="NotificationServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="microService.notification-service.main" />
+      <module name="microservice.notification-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.notificationservice.NotificationServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -312,25 +312,25 @@
       </method>
     </configuration>
     <configuration name="OrderServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="microService.order-service.main" />
+      <module name="microservice.order-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.orderservice.OrderServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ProductApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="microService.product.main" />
+      <module name="microservice.product.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.microservcie.ProductApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.microService [jibDockerBuild]" />
       <item itemvalue="Gradle.microService [jib]" />
       <item itemvalue="Gradle.microService:api-gateway [bootJar]" />
       <item itemvalue="Gradle.microService:api-gateway [build]" />
       <item itemvalue="Gradle.microService:api-gateway [clean]" />
-      <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
       <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
       <item itemvalue="Spring Boot.ProductApplication (1)" />
@@ -342,10 +342,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.microService [jib]" />
+        <item itemvalue="Gradle.microService [jibDockerBuild]" />
         <item itemvalue="Gradle.microService:api-gateway [bootJar]" />
         <item itemvalue="Gradle.microService:api-gateway [clean]" />
         <item itemvalue="Gradle.microService:api-gateway [build]" />
-        <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +382,8 @@
       <workItem from="1721484535298" duration="3376000" />
       <workItem from="1721563473125" duration="3070000" />
       <workItem from="1721651834807" duration="2316000" />
-      <workItem from="1721654227816" duration="43000" />
+      <workItem from="1721654227816" duration="1146000" />
+      <workItem from="1721655434237" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -650,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721569390581</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="jib 추가하여 docker build 설정 추가">
+      <created>1721654289161</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1721654289161</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +682,6 @@
       <path value="$PROJECT_DIR$/api-gateway" />
       <path value="$PROJECT_DIR$/notification-service" />
     </ignored-roots>
-    <MESSAGE value="testApplication 추가" />
     <MESSAGE value="api-gateway 어플리케이션 추가" />
     <MESSAGE value="api-gateway에 order,proudoct, discovery-server 연결" />
     <MESSAGE value="api-gateway에 oauth2 설정 추가" />
@@ -699,6 +706,7 @@
     <MESSAGE value="notification-service consuemer 연결 확인" />
     <MESSAGE value="apigateway Dockerfile 생성" />
     <MESSAGE value="apigateway Dockerfile_layered 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="apigateway Dockerfile_layered 생성" />
+    <MESSAGE value="jib 추가하여 docker build 설정 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="jib 추가하여 docker build 설정 추가" />
   </component>
 </project>
