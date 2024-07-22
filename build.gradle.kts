@@ -4,6 +4,28 @@ plugins {
     kotlin("jvm") version "1.9.24"
     id("org.springframework.boot") version "3.3.1"
     id("io.spring.dependency-management") version "1.1.5"
+    id("com.google.cloud.tools.jib") version "3.2.1"
+}
+
+jib {
+    from {
+        image = "eclipse-temurin:17.0.4.1_1-jre"
+    }
+    to {
+        image = "maizurzu/default/${project.name}"
+        tags = setOf("latest")
+    }
+    container {
+        jvmFlags = listOf("-Xms512m", "-Xmx1024m")
+    }
+    // docker login
+    // ./gradlew build jib
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
 
 group = "org.example"
@@ -52,6 +74,7 @@ subprojects {
     tasks.withType<Test> {
         useJUnitPlatform()
     }
+
 
     dependencyManagement {
         imports {
