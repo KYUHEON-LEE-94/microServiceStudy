@@ -1,4 +1,4 @@
-package com.study.microservcie
+package com.study.product
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

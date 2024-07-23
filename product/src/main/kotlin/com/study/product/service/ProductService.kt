@@ -1,9 +1,9 @@
-package com.study.microservcie.service
+package com.study.product.service
 
-import com.study.microservcie.dto.ProductRequest
-import com.study.microservcie.dto.ProductResponse
-import com.study.microservcie.model.Product
-import com.study.microservcie.repository.ProductRepository
+import com.study.product.dto.ProductRequest
+import com.study.product.dto.ProductResponse
+import com.study.product.model.Product
+import com.study.product.repository.ProductRepository
 import io.github.oshai.kotlinlogging.KotlinLogging
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

@@ -3,8 +3,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
-
 }
+
 rootProject.name = "microservice"
-include(":order-service", ":inventory-service", ":product", ":discovery-server", ":api-gateway", ":notification-service")
+include(":discovery-server", ":api-gateway", ":order-service", ":inventory-service", ":product", ":notification-service")
+
 

@@ -43,7 +43,9 @@ sourceSets {
     }
 }
 
-
+tasks.named("jib") {
+    enabled = false
+}
 
 subprojects {
 
@@ -70,25 +72,70 @@ subprojects {
             mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
         }
     }
+
+    jib {
+        from {
+            image = "eclipse-temurin:17.0.4.1_1-jre"
+        }
+        to {
+            image = "mizurzu/${project.name}"
+        }
+        container {
+            jvmFlags = listOf("-Xms512m", "-Xmx1024m")
+            mainClass = "com.study.${project.name}.Application" // 각 서브 프로젝트에 맞는 메인 클래스 이름으로 변경 필요
+        }
+    }
 }
 
-jib {
-    from {
-        image = "eclipse-temurin:17.0.4.1_1-jre"
-    }
-    to {
-        image = "maizurzu/${project.name}"
-        tags = setOf("latest")
-    }
-    container {
-        mainClass = "com.study.${project.name}.MainKt"
-        jvmFlags = listOf(
-            "-Xms512m",
-            "-Xmx1024m"
-        )
-        ports = listOf("8080")
+project(":api-gateway") {
+    jib {
+        container {
+            mainClass = "com.study.apigateway.ApiGatewayApplication"
+        }
     }
 }
-// docker login
-// ./gradlew jib
 
+project(":discovery-server") {
+    jib {
+        container {
+            mainClass = "com.study.discoveryserver.DiscoveryServerApplication"
+        }
+    }
+}
+
+project(":inventory-service") {
+    jib {
+        container {
+            mainClass = "com.study.inventoryservice.InventoryServiceApplication"
+        }
+    }
+}
+
+project(":notification-service") {
+    jib {
+        container {
+            mainClass = "com.study.notificationservice.NotificationServiceApplication"
+        }
+    }
+}
+
+project(":order-service") {
+    jib {
+        container {
+            mainClass = "com.study.orderservice.OrderServiceApplication"
+        }
+    }
+}
+
+project(":product") {
+    jib {
+        container {
+            mainClass = "com.study.product.ProductApplication"
+        }
+    }
+}
+
+tasks.register("jibDockerBuildAll") {
+    dependsOn(subprojects.map { it.tasks.named("jibDockerBuild") })
+}
+// ./gradlew jibDockerBuildAll

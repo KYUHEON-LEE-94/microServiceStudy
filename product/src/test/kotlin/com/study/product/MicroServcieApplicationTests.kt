@@ -1,8 +1,8 @@
-package com.study.microservcie
+package com.study.product
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.study.microservcie.dto.ProductRequest
-import com.study.microservcie.repository.ProductRepository
+import com.study.product.dto.ProductRequest
+import com.study.product.repository.ProductRepository
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc

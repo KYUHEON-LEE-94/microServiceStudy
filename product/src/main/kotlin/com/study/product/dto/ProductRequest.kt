@@ -1,11 +1,10 @@
-package com.study.microservcie.repository
+package com.study.product.dto
 
-import com.study.microservcie.model.Product
-import org.springframework.data.mongodb.repository.MongoRepository
+import java.math.BigDecimal
 
 /**
- *packageName    : com.study.microservcie.repository
- * fileName       : ProductRepository
+ *packageName    : com.study.microservcie.dto
+ * fileName       : ProductRequest
  * author         : LEE KYUHEON
  * date           : 2024-07-02
  * description    :
@@ -14,5 +13,10 @@ import org.springframework.data.mongodb.repository.MongoRepository
  * -----------------------------------------------------------
  * 2024-07-02        LEE KYUHEON       최초 생성
  */
-interface ProductRepository: MongoRepository<Product, String>{
-}
+
+data class ProductRequest(
+    var id: String = "",
+    var name: String = "",
+    var description: String = "",
+    var price: BigDecimal = BigDecimal.ZERO
+)

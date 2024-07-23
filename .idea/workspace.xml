@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="docker container script 추가">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/kotlin/com/study/discoveryserver/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/kotlin/com/study/discoveryserver/config/SecurityConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/ProductApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/ProductApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/controller/ProductController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/controller/ProductController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/dto/ProductRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/dto/ProductRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/dto/ProductResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/dto/ProductResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/model/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/model/Product.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/repository/ProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/repository/ProductRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/service/ProductService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/service/ProductService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/test/kotlin/com/study/microservcie/MicroServcieApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/test/kotlin/com/study/product/MicroServcieApplicationTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +125,7 @@
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/inventory-service",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "프로젝트",
+    "project.structure.last.edited": "모듈",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
@@ -250,13 +258,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="notification-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.notificationservice.NotificationServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OrderServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="microservice.order-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.orderservice.OrderServiceApplication" />
@@ -266,7 +267,14 @@
     </configuration>
     <configuration name="ProductApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="microservice.product.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.microservcie.ProductApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.product.ProductApplicationKt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="microservice.product.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.product.ProductApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -275,8 +283,8 @@
       <item itemvalue="Gradle.microServcie [jib]" />
       <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
       <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
-      <item itemvalue="Spring Boot.NotificationServiceApplication" />
       <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
+      <item itemvalue="Spring Boot.ProductApplication" />
       <item itemvalue="Spring Boot.ProductApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayApplication (1)" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication (1)" />
@@ -495,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721293365324</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용">
+      <created>1721700311789</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721700311789</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,6 +557,7 @@
     <MESSAGE value="추가 resilience4j 설정 테스트" />
     <MESSAGE value="properties logging.level 추가" />
     <MESSAGE value="docker container script 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker container script 추가" />
+    <MESSAGE value="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용" />
+    <option name="LAST_COMMIT_MESSAGE" value="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용" />
   </component>
 </project>

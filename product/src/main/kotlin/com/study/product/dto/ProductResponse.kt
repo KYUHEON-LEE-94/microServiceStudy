@@ -1,13 +1,10 @@
-package com.study.microservcie.model
+package com.study.product.dto
 
-
-import org.springframework.data.annotation.Id
-import org.springframework.data.mongodb.core.mapping.Document
 import java.math.BigDecimal
 
 /**
- *packageName    : com.study.microservcie.model
- * fileName       : Product
+ *packageName    : com.study.microservcie.dto
+ * fileName       : ProductResponse
  * author         : LEE KYUHEON
  * date           : 2024-07-02
  * description    :
@@ -16,9 +13,7 @@ import java.math.BigDecimal
  * -----------------------------------------------------------
  * 2024-07-02        LEE KYUHEON       최초 생성
  */
-@Document(value = "product")
-data class Product(
-    @Id
+data class ProductResponse(
     var id: String = "",
     var name: String = "",
     var description: String = "",

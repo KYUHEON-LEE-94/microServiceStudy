@@ -1,8 +1,8 @@
-package com.study.microservcie.controller
+package com.study.product.controller
 
-import com.study.microservcie.dto.ProductRequest
-import com.study.microservcie.dto.ProductResponse
-import com.study.microservcie.service.ProductService
+import com.study.product.dto.ProductRequest
+import com.study.product.dto.ProductResponse
+import com.study.product.service.ProductService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
