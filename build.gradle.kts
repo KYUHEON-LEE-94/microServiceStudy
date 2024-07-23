@@ -78,7 +78,12 @@ subprojects {
             image = "eclipse-temurin:17.0.4.1_1-jre"
         }
         to {
-            image = "mizurzu/${project.name}"
+            image = "docker.io/maizurzu/${project.name}"
+            // set DOCKER_USERNAME=your-docker-username
+            tags = setOf("latest", project.version.toString())
+//            credHelper {
+//                helper = "wincred" // Docker Hub credential helper 설정
+//            }
         }
         container {
             jvmFlags = listOf("-Xms512m", "-Xmx1024m")

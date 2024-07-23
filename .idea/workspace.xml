@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="드디어 dockerization 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/ProductApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/ProductApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/controller/ProductController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/controller/ProductController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/dto/ProductRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/dto/ProductRequest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/dto/ProductResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/dto/ProductResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/model/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/model/Product.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/repository/ProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/repository/ProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/kotlin/com/study/microservcie/service/ProductService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/kotlin/com/study/product/service/ProductService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/test/kotlin/com/study/microservcie/MicroServcieApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/test/kotlin/com/study/product/MicroServcieApplicationTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +119,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "spring.configuration.checksum": "3c467d469208b1c9c3837d611efe70c7"
+    "spring.configuration.checksum": "f9aea592341ebd6788bef22b541d4a18"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -150,7 +140,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.microServcie [jib]">
+  <component name="RunManager" selected="Gradle.microServcie [jibDockerBuild]">
     <configuration name="MicroServcieApplicationTests.shouldCreateProduct" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -191,6 +181,27 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="microServcie [jibDockerBuild]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jibDockerBuild" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -280,6 +291,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.microServcie [jibDockerBuild]" />
       <item itemvalue="Gradle.microServcie [jib]" />
       <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
       <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
@@ -293,6 +305,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.microServcie [jibDockerBuild]" />
         <item itemvalue="Gradle.microServcie [jib]" />
         <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
         <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
@@ -327,6 +340,7 @@
       <workItem from="1721134876194" duration="2306000" />
       <workItem from="1721223044968" duration="2336000" />
       <workItem from="1721290529502" duration="2658000" />
+      <workItem from="1721720007631" duration="3740000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -510,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721700311789</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="드디어 dockerization 완료">
+      <created>1721710195959</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1721710195959</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +554,6 @@
       <path value="$PROJECT_DIR$/discovery-server" />
       <path value="$PROJECT_DIR$/api-gateway" />
     </ignored-roots>
-    <MESSAGE value="proudct-service application 추가" />
     <MESSAGE value="TestContainers 의존성 추가및 기본 세팅" />
     <MESSAGE value="README 위치 변경" />
     <MESSAGE value="post Save Test 생성" />
@@ -558,6 +578,7 @@
     <MESSAGE value="properties logging.level 추가" />
     <MESSAGE value="docker container script 추가" />
     <MESSAGE value="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용" />
-    <option name="LAST_COMMIT_MESSAGE" value="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용" />
+    <MESSAGE value="드디어 dockerization 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="드디어 dockerization 완료" />
   </component>
 </project>
