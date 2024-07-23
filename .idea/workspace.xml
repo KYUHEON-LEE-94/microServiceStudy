@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="jib 추가하여 docker build 설정 추가">
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="docker container script 추가">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/kotlin/com/study/discoveryserver/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/kotlin/com/study/discoveryserver/config/SecurityConfig.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +53,6 @@
         <task path="$PROJECT_DIR$/product">
           <activation />
         </task>
-        <task path="$PROJECT_DIR$/api-gateway">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -94,9 +91,6 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -106,7 +100,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -122,30 +115,23 @@
     "WebServerToolWindowFactoryState": "false",
     "deletionFromPopupRequiresConfirmation": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/api-gateway",
+    "last_opened_file_path": "C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/inventory-service",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "모듈",
+    "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "spring.configuration.checksum": "705b0035bfd3f09e21e8582077a6aa13"
+    "spring.configuration.checksum": "3c467d469208b1c9c3837d611efe70c7"
   }
 }]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LEE KYUHEON\Desktop\Web_Develpment\공부 폴더\kotlin_project\microService\api-gateway" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\dockerScropt" />
     </key>
-    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.study.notificationservice.event" />
-    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="com.study.notificationservice" />
       <recent name="com.study.orderservice.dto" />
     </key>
   </component>
@@ -156,29 +142,52 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.microService [jib]">
-    <configuration name="microService [jibDockerBuild]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.microServcie [jib]">
+    <configuration name="MicroServcieApplicationTests.shouldCreateProduct" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/product" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="jibDockerBuild" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.study.microservcie.MicroServcieApplicationTests.shouldCreateProduct&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="microService [jib]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="'microService.inventory-service'에 있는 테스트" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":inventory-service:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="microServcie [jib]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,69 +199,6 @@
         <option name="taskNames">
           <list>
             <option value="jib" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="microService:api-gateway [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="microService:api-gateway [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="microService:api-gateway [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -326,13 +272,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.microService [jibDockerBuild]" />
-      <item itemvalue="Gradle.microService [jib]" />
-      <item itemvalue="Gradle.microService:api-gateway [bootJar]" />
-      <item itemvalue="Gradle.microService:api-gateway [build]" />
-      <item itemvalue="Gradle.microService:api-gateway [clean]" />
-      <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
+      <item itemvalue="Gradle.microServcie [jib]" />
+      <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
+      <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
       <item itemvalue="Spring Boot.ProductApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayApplication (1)" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication (1)" />
@@ -341,11 +285,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.microService [jib]" />
-        <item itemvalue="Gradle.microService [jibDockerBuild]" />
-        <item itemvalue="Gradle.microService:api-gateway [bootJar]" />
-        <item itemvalue="Gradle.microService:api-gateway [clean]" />
-        <item itemvalue="Gradle.microService:api-gateway [build]" />
+        <item itemvalue="Gradle.microServcie [jib]" />
+        <item itemvalue="Gradle.'microService.inventory-service'에 있는 테스트" />
+        <item itemvalue="Gradle.MicroServcieApplicationTests.shouldCreateProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -377,13 +319,6 @@
       <workItem from="1721134876194" duration="2306000" />
       <workItem from="1721223044968" duration="2336000" />
       <workItem from="1721290529502" duration="2658000" />
-      <workItem from="1721307176560" duration="2460000" />
-      <workItem from="1721397265761" duration="4141000" />
-      <workItem from="1721484535298" duration="3376000" />
-      <workItem from="1721563473125" duration="3070000" />
-      <workItem from="1721651834807" duration="2316000" />
-      <workItem from="1721654227816" duration="1146000" />
-      <workItem from="1721655434237" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -560,105 +495,7 @@
       <option name="project" value="LOCAL" />
       <updated>1721293365324</updated>
     </task>
-    <task id="LOCAL-00026" summary="container 가 있는 경우는 그냥 실행 없는 경우 생성 구문 추가">
-      <created>1721307677490</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1721307677490</updated>
-    </task>
-    <task id="LOCAL-00027" summary="order Get API 추가">
-      <created>1721309656156</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1721309656156</updated>
-    </task>
-    <task id="LOCAL-00028" summary="circuitBreaker 주석 후 Zipkin 확인">
-      <created>1721398426480</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1721398426480</updated>
-    </task>
-    <task id="LOCAL-00029" summary="kafka docker-compose.yml 추가">
-      <created>1721399146185</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1721399146185</updated>
-    </task>
-    <task id="LOCAL-00030" summary="kafka docker-compose.yml 추가에 따른 script 변경">
-      <created>1721399700429</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1721399700429</updated>
-    </task>
-    <task id="LOCAL-00031" summary="kafka 의존성 추가및 kafkaTemplate 사용">
-      <created>1721400467470</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1721400467470</updated>
-    </task>
-    <task id="LOCAL-00032" summary="notification 모듈 추가">
-      <created>1721484578271</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1721484578271</updated>
-    </task>
-    <task id="LOCAL-00033" summary="notification 모듈 추가">
-      <created>1721484645288</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1721484645288</updated>
-    </task>
-    <task id="LOCAL-00034" summary="notification-service 의존성 정리">
-      <created>1721485019367</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1721485019367</updated>
-    </task>
-    <task id="LOCAL-00035" summary="notification-service properties 설정">
-      <created>1721486427077</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1721486427077</updated>
-    </task>
-    <task id="LOCAL-00036" summary="notification-service consuemer 연결 확인">
-      <created>1721487404024</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1721487404024</updated>
-    </task>
-    <task id="LOCAL-00037" summary="apigateway Dockerfile 생성">
-      <created>1721568157838</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1721568157838</updated>
-    </task>
-    <task id="LOCAL-00038" summary="apigateway Dockerfile_layered 생성">
-      <created>1721569390581</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1721569390581</updated>
-    </task>
-    <task id="LOCAL-00039" summary="jib 추가하여 docker build 설정 추가">
-      <created>1721654289161</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1721654289161</updated>
-    </task>
-    <option name="localTasksCounter" value="40" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,8 +517,19 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/discovery-server" />
       <path value="$PROJECT_DIR$/api-gateway" />
-      <path value="$PROJECT_DIR$/notification-service" />
     </ignored-roots>
+    <MESSAGE value="proudct-service application 추가" />
+    <MESSAGE value="TestContainers 의존성 추가및 기본 세팅" />
+    <MESSAGE value="README 위치 변경" />
+    <MESSAGE value="post Save Test 생성" />
+    <MESSAGE value="post Save Test Assert까지 성공" />
+    <MESSAGE value="product-service -&gt; order-service" />
+    <MESSAGE value="OrderLineItems 추가" />
+    <MESSAGE value="discovery-server 모듈 추가" />
+    <MESSAGE value="eureka-client 등록" />
+    <MESSAGE value="inventory-service 다중 실행 설정" />
+    <MESSAGE value="order-service의 webclient에 @LoadBalance 추가하여 다수의 inventory-service 사용 가능" />
+    <MESSAGE value="testApplication 추가" />
     <MESSAGE value="api-gateway 어플리케이션 추가" />
     <MESSAGE value="api-gateway에 order,proudoct, discovery-server 연결" />
     <MESSAGE value="api-gateway에 oauth2 설정 추가" />
@@ -694,19 +542,6 @@
     <MESSAGE value="추가 resilience4j 설정 테스트" />
     <MESSAGE value="properties logging.level 추가" />
     <MESSAGE value="docker container script 추가" />
-    <MESSAGE value="container 가 있는 경우는 그냥 실행 없는 경우 생성 구문 추가" />
-    <MESSAGE value="order Get API 추가" />
-    <MESSAGE value="circuitBreaker 주석 후 Zipkin 확인" />
-    <MESSAGE value="kafka docker-compose.yml 추가" />
-    <MESSAGE value="kafka docker-compose.yml 추가에 따른 script 변경" />
-    <MESSAGE value="kafka 의존성 추가및 kafkaTemplate 사용" />
-    <MESSAGE value="notification 모듈 추가" />
-    <MESSAGE value="notification-service 의존성 정리" />
-    <MESSAGE value="notification-service properties 설정" />
-    <MESSAGE value="notification-service consuemer 연결 확인" />
-    <MESSAGE value="apigateway Dockerfile 생성" />
-    <MESSAGE value="apigateway Dockerfile_layered 생성" />
-    <MESSAGE value="jib 추가하여 docker build 설정 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="jib 추가하여 docker build 설정 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker container script 추가" />
   </component>
 </project>

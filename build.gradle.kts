@@ -70,22 +70,25 @@ subprojects {
             mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
         }
     }
+}
 
-
-    jib {
-        from {
-            image = "eclipse-temurin:17.0.4.1_1-jre"
-        }
-        to {
-            image = "maizurzu/${project.name}"
-            tags = setOf("latest")
-        }
-        container {
-            jvmFlags = listOf("-Xms512m", "-Xmx1024m")
-            mainClass = "com.study.${project.name}"
-        }
-        // docker login
-        // ./gradlew jib --image=maizurzu/${project.name}:latest
+jib {
+    from {
+        image = "eclipse-temurin:17.0.4.1_1-jre"
+    }
+    to {
+        image = "maizurzu/${project.name}"
+        tags = setOf("latest")
+    }
+    container {
+        mainClass = "com.study.${project.name}.MainKt"
+        jvmFlags = listOf(
+            "-Xms512m",
+            "-Xmx1024m"
+        )
+        ports = listOf("8080")
     }
 }
+// docker login
+// ./gradlew jib
 
