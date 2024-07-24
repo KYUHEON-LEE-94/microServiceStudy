@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="드디어 dockerization 진짜 완료">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="docker-compose.yml">
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,32 +100,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LEE KYUHEON/Desktop/Web_Develpment/공부 폴더/kotlin_project/microService/inventory-service&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f9aea592341ebd6788bef22b541d4a18&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/user/Desktop/Private/Study/study-project/kotlin/microServcie/discovery-server/src/main/resources",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "f9aea592341ebd6788bef22b541d4a18"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\discovery-server\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\dockerScropt" />
     </key>
@@ -342,7 +345,7 @@
       <workItem from="1721290529502" duration="2658000" />
       <workItem from="1721720007631" duration="4478000" />
       <workItem from="1721795960622" duration="743000" />
-      <workItem from="1721811763980" duration="1704000" />
+      <workItem from="1721811763980" duration="3012000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -540,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721724062346</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="docker-compose.yml">
+      <created>1721814286107</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1721814286107</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +573,6 @@
       <path value="$PROJECT_DIR$/discovery-server" />
       <path value="$PROJECT_DIR$/api-gateway" />
     </ignored-roots>
-    <MESSAGE value="README 위치 변경" />
     <MESSAGE value="post Save Test 생성" />
     <MESSAGE value="post Save Test Assert까지 성공" />
     <MESSAGE value="product-service -&gt; order-service" />
@@ -588,6 +597,7 @@
     <MESSAGE value="NoOpPasswordEncoder 제거 BCryptPasswordEncoder 사용" />
     <MESSAGE value="드디어 dockerization 완료" />
     <MESSAGE value="드디어 dockerization 진짜 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="드디어 dockerization 진짜 완료" />
+    <MESSAGE value="docker-compose.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker-compose.yml" />
   </component>
 </project>
