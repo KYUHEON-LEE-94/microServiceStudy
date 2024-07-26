@@ -81,13 +81,10 @@ subprojects {
             image = "docker.io/maizurzu/${project.name}"
             // set DOCKER_USERNAME=your-docker-username
             tags = setOf("latest", project.version.toString())
-//            credHelper {
-//                helper = "wincred" // Docker Hub credential helper 설정
-//            }
         }
         container {
             jvmFlags = listOf("-Xms512m", "-Xmx1024m")
-            mainClass = "com.study.${project.name}.Application" // 각 서브 프로젝트에 맞는 메인 클래스 이름으로 변경 필요
+            mainClass = "com.study.${project.name}.ApplicationKt" // 각 서브 프로젝트에 맞는 메인 클래스 이름으로 변경 필요
         }
     }
 }
@@ -95,7 +92,7 @@ subprojects {
 project(":api-gateway") {
     jib {
         container {
-            mainClass = "com.study.apigateway.ApiGatewayApplication"
+            mainClass = "com.study.apigateway.ApiGatewayApplicationKt"
         }
     }
 }
@@ -103,7 +100,7 @@ project(":api-gateway") {
 project(":discovery-server") {
     jib {
         container {
-            mainClass = "com.study.discoveryserver.DiscoveryServerApplication"
+            mainClass = "com.study.discoveryserver.DiscoveryServerApplicationKt"
         }
     }
 }
@@ -111,7 +108,7 @@ project(":discovery-server") {
 project(":inventory-service") {
     jib {
         container {
-            mainClass = "com.study.inventoryservice.InventoryServiceApplication"
+            mainClass = "com.study.inventoryservice.InventoryServiceApplicationKt"
         }
     }
 }
@@ -119,7 +116,7 @@ project(":inventory-service") {
 project(":notification-service") {
     jib {
         container {
-            mainClass = "com.study.notificationservice.NotificationServiceApplication"
+            mainClass = "com.study.notificationservice.NotificationServiceApplicationKt"
         }
     }
 }
@@ -127,7 +124,7 @@ project(":notification-service") {
 project(":order-service") {
     jib {
         container {
-            mainClass = "com.study.orderservice.OrderServiceApplication"
+            mainClass = "com.study.orderservice.OrderServiceApplicationKt"
         }
     }
 }
@@ -135,7 +132,7 @@ project(":order-service") {
 project(":product") {
     jib {
         container {
-            mainClass = "com.study.product.ProductApplication"
+            mainClass = "com.study.product.ProductApplicationKt"
         }
     }
 }
