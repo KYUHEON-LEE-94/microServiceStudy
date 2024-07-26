@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="docker-compose.yml">
-      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.properties" afterDir="false" />
+    <list default="true" id="ddbdcc09-c22a-45b6-8f2e-82cf66044614" name="변경" comment="application-docker.properties 일단 Discovery-service에만 추가">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +115,7 @@
     "WebServerToolWindowFactoryState": "false",
     "deletionFromPopupRequiresConfirmation": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/user/Desktop/Private/Study/study-project/kotlin/microServcie/discovery-server/src/main/resources",
+    "last_opened_file_path": "C:/Users/user/Desktop/Private/Study/study-project/kotlin/microServcie/order-service/src/main/resources",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "모듈",
     "project.structure.proportion": "0.15",
@@ -127,9 +129,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\order-service\src\main\resources" />
+      <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\product\src\main\resources" />
+      <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\api-gateway\src\main\resources" />
       <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\discovery-server\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\discovery-server\src\main\resources" />
+      <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\api-gateway\src\main\resources" />
       <recent name="C:\Users\user\Desktop\Private\Study\study-project\kotlin\microServcie\dockerScropt" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -345,7 +352,8 @@
       <workItem from="1721290529502" duration="2658000" />
       <workItem from="1721720007631" duration="4478000" />
       <workItem from="1721795960622" duration="743000" />
-      <workItem from="1721811763980" duration="3012000" />
+      <workItem from="1721811763980" duration="3159000" />
+      <workItem from="1721968073795" duration="1180000" />
     </task>
     <task id="LOCAL-00001" summary="proudct-service application 추가">
       <created>1719995795962</created>
@@ -550,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721814286107</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="application-docker.properties 일단 Discovery-service에만 추가">
+      <created>1721816211243</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1721816211243</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +588,6 @@
       <path value="$PROJECT_DIR$/discovery-server" />
       <path value="$PROJECT_DIR$/api-gateway" />
     </ignored-roots>
-    <MESSAGE value="post Save Test 생성" />
     <MESSAGE value="post Save Test Assert까지 성공" />
     <MESSAGE value="product-service -&gt; order-service" />
     <MESSAGE value="OrderLineItems 추가" />
@@ -598,6 +612,7 @@
     <MESSAGE value="드디어 dockerization 완료" />
     <MESSAGE value="드디어 dockerization 진짜 완료" />
     <MESSAGE value="docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker-compose.yml" />
+    <MESSAGE value="application-docker.properties 일단 Discovery-service에만 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="application-docker.properties 일단 Discovery-service에만 추가" />
   </component>
 </project>
