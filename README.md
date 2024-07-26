@@ -9,10 +9,10 @@
 ## Tools
 - Eureka
 - spring cloud gateway
-- keyCloak (by Docker)
+- keyCloak (Docker)
 - resilience4j (circuitbreaker)
-- zipkin (by Docker)
-- kafka
+- zipkin (Docker)
+- kafka (Docker)
 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
@@ -136,3 +136,4 @@ Circuit Breaker의 세 가지 상태
 # 그 외 출처
 - https://www.keycloak.org/getting-started/getting-started-docker
 - https://spring.io/projects/spring-cloud
+- https://hub.docker.com/
