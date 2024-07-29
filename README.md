@@ -3,9 +3,11 @@
 ## Language & FrameWork
 - kotlin (JDK17)
 - spring boot
+
 ## DB
 - MongoDB (by Docker)
 -  MySql
+  
 ## Tools
 - Eureka
 - spring cloud gateway
@@ -14,16 +16,16 @@
 - zipkin (Docker)
 - kafka (Docker)
 
+## 실습에 필요한 도커 컨테이너 생성 스크립트
+- dockerScript 폴더 아래에 있는 .ps1, sh 스크립트로 Docker 컨테이너 생성 및 실행 가능
+  - powerShell: run_docker_containers.ps1
+  - Linux: run_docker_containers.sh
+ 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
 - Java -> kotlin으로 코드를 변경함으로써 kotlin 문법 적응
 - 다양한 Tool 학습
 - kuernetes 실전 적용
-
-# Provisioning
-- dockerScript 폴더 아래에 있는 .ps1, sh 스크립트로 Docker 컨테이너 생성 및 실행 가능
-  - powerShell: run_docker_containers.ps1
-  - Linux: run_docker_containers.sh
 
 # API
 ### Proudct
