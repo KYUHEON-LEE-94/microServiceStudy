@@ -21,6 +21,9 @@
   - powerShell: run_docker_containers.ps1
   - Linux: run_docker_containers.sh
  
+## DockerHub
+- [https://hub.docker.com/](https://hub.docker.com/repository/docker/maizurzu/product/general)
+ 
 # 목적
 - spring boot Microservice Project 배우기 및 활용
 - Java -> kotlin으로 코드를 변경함으로써 kotlin 문법 적응
@@ -129,6 +132,9 @@ Circuit Breaker의 세 가지 상태
 
 ##### 사용 예시 화면
 ![image](https://github.com/user-attachments/assets/1d26c155-8704-443f-99c4-d36674fd6cea)
+
+#### 5. prometheus, Grafana
+![image](https://github.com/user-attachments/assets/fe65da53-fa60-4fcb-8c49-fa9ed31b91b5)
 
 
 
