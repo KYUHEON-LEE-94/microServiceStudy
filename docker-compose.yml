@@ -201,8 +201,10 @@ services:
       - order-service
       - notification-service
 
+# sudo chown -R 472:472 ./grafana
   grafana:
     image: grafana/grafana-oss:8.5.27
+    user: "0:0"
     container_name: grafana
     restart: unless-stopped
     ports:
