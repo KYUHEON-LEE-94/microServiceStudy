@@ -16,6 +16,13 @@ spec:
       labels:
         app: keycloak-mysql
     spec:
+      initContainers:
+        - name: init-mysql
+          image: mysql:8
+          command: [ "sh", "-c", "test -d /var/lib/mysql/mysql || mysqld --initialize-insecure --user=mysql" ]
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: keycloak-mysql-claim0
       containers:
         - env:
             - name: MYSQL_DATABASE
@@ -26,8 +33,10 @@ spec:
               value: root
             - name: MYSQL_USER
               value: keycloak
-          image: mysql:5.7
+          image: mysql:8
           name: keycloak-mysql
+          command: [ "mysqld" ]
+          args: [ "--explicit_defaults_for_timestamp" ]
           resources: {}
           volumeMounts:
             - mountPath: /var/lib/mysql
@@ -42,7 +51,6 @@ status: {}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  creationTimestamp: null
   labels:
     app: keycloak-mysql-claim0
   name: keycloak-mysql-claim0
