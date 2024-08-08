@@ -13,14 +13,17 @@ spec:
     type: Recreate
   template:
     metadata:
-
       labels:
         app: keycloak
     spec:
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
       containers:
         - args:
             - start-dev
-            - --import-realm
+#            - --import-realm # /opt/keycloak/data/import/ 디렉토리에서 Realm 설정 파일을 자동으로 가져오도록 지시
           env:
             - name: DB_ADDR
               value: mysql
