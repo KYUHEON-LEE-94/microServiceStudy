@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: prometheus
   name: prometheus
@@ -14,7 +13,6 @@ spec:
     type: Recreate
   template:
     metadata:
-
       labels:
         app: prometheus
     spec:
@@ -23,16 +21,15 @@ spec:
           name: prometheus
           ports:
             - containerPort: 9090
-          resources: {}
           volumeMounts:
-            - mountPath: /etc/prometheus/prometheus.yml
-              name: prometheus-claim0
+            - name: prometheus-config-volume
+              mountPath: /etc/prometheus/
+              subPath: prometheus.yml
       restartPolicy: Always
       volumes:
-        - name: prometheus-claim0
-          persistentVolumeClaim:
-            claimName: prometheus-claim0
-status: {}
+        - name: prometheus-config-volume
+          configMap:
+            name: prometheus-config
 ---
 apiVersion: v1
 kind: Service
@@ -49,18 +46,3 @@ spec:
     app: prometheus
 status:
   loadBalancer: {}
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  creationTimestamp: null
-  labels:
-    app: prometheus-claim0
-  name: prometheus-claim0
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 100Mi
-status: {}
