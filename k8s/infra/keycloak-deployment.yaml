@@ -91,6 +91,11 @@ kind: Ingress
 metadata:
   name: auth-ingress
 spec:
+  defaultBackend:
+    service:
+      name: keycloak
+      port:
+        number: 8080
   rules:
     - host: "auth.localtest.me"
       http:
@@ -101,4 +106,4 @@ spec:
               service:
                 name: keycloak
                 port:
-                  number: 8080
+                  number: 80
