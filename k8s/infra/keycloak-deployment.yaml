@@ -97,7 +97,7 @@ spec:
       port:
         number: 8080
   rules:
-    - host: "auth.localtest.me"
+    - host: "keycloak"
       http:
         paths:
           - pathType: Prefix
@@ -107,3 +107,6 @@ spec:
                 name: keycloak
                 port:
                   number: 80
+  tls:
+    - hosts:
+      - "keycloak"
