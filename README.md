@@ -11,15 +11,21 @@
 ## Tools
 - Eureka
 - spring cloud gateway
-- keyCloak (Docker)
+- keyCloak
 - resilience4j (circuitbreaker)
-- zipkin (Docker)
-- kafka (Docker)
+- zipkin
+- kafka
+- grafana, prometheus
 
-## 실습에 필요한 도커 컨테이너 생성 스크립트
+## Script
+### 실습에 필요한 도커 컨테이너 생성 스크립트
 - dockerScript 폴더 아래에 있는 .ps1, sh 스크립트로 Docker 컨테이너 생성 및 실행 가능
   - powerShell: run_docker_containers.ps1
   - Linux: run_docker_containers.sh
+ 
+### k8s yaml
+- Infra: DB, gateway, tools
+- application: inventory-service, notification-service, order-service, product-service
  
 ## DockerHub
 - [https://hub.docker.com/](https://hub.docker.com/repository/docker/maizurzu/product/general)
