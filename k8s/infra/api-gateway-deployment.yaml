@@ -17,6 +17,8 @@ spec:
     spec:
       containers:
         - env:
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              value: "http://eureka:password@discovery-server:8761/eureka"
             - name: LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY
               value: ' TRACE'
             - name: SPRING_PROFILES_ACTIVE
